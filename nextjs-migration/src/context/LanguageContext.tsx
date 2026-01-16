@@ -14,19 +14,24 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('maavii_lang');
-      return (saved as Language) || 'EN';
-    }
-    return 'EN';
-  });
+  const [language, setLanguage] = useState<Language>('EN');
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('maavii_lang');
+      if (saved) {
+        setLanguage(saved as Language);
+      }
+      setIsLoaded(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isLoaded && typeof window !== 'undefined') {
       localStorage.setItem('maavii_lang', language);
     }
-  }, [language]);
+  }, [language, isLoaded]);
 
   const t = (key: string) => {
     return TRANSLATIONS[key]?.[language] || key;

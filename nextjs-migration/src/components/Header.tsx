@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ShoppingCart, Globe } from 'lucide-react';
@@ -16,7 +16,14 @@ const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
   const { language, setLanguage, t } = useLanguage();
   const { itemCount } = useCart();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+
 
   const navLinks = [
     { name: t('navHome'), href: '/', isHash: false },
@@ -102,7 +109,7 @@ const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
             aria-label="View Shopping Cart"
           >
             <ShoppingCart className="w-6 h-6" />
-            {itemCount > 0 && (
+            {mounted && itemCount > 0 && (
               <span className="absolute -top-2 -right-2 w-6 h-6 bg-deepRed text-cream text-[10px] font-black rounded-full flex items-center justify-center ring-2 ring-cream shadow-lg">
                 {itemCount}
               </span>
