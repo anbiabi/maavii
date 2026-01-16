@@ -25,19 +25,11 @@ const rawMenuItems = [
     { file: "09_dense_cake_slice.jpg", cat: "Desserts", price: 5 },
     { file: "10_fried_pastries_pastel.jpg", cat: "Starters", price: 3.5 },
     { file: "11_rolled_crepes_panquecas.jpg", cat: "Desserts", price: 5 },
-    { file: "african-festival-market.jpg", cat: "Specials", price: 25 },
-    { file: "all_menu.jpg", cat: "Specials", price: 50 },
     { file: "boiled_cassava_manioc.png", cat: "Starters", price: 6 },
     { file: "cabage stew.jpg", cat: "Mains", price: 14 },
-    { file: "cabage-stew_potato.jpg", cat: "Mains", price: 15 },
-    { file: "camerball.jpg", cat: "Starters", price: 4 },
     { file: "cameroonian-meal-platter.jpg", cat: "Specials", price: 45 },
     { file: "chapati_flatbread.jpg", cat: "Sides", price: 3 },
     { file: "chicken ocra.jpg", cat: "Mains", price: 18 },
-    { file: "chicken_brochettes_skewers.jpg", cat: "Grill", price: 4 },
-    { file: "chicken_skewers.jpg", cat: "Grill", price: 4 },
-    { file: "chicken_skewers_1.jpg", cat: "Grill", price: 4 },
-    { file: "chicken_skewers_7.jpg", cat: "Grill", price: 4 },
     { file: "colorful-meat-skewers.jpg", cat: "Grill", price: 5 },
     { file: "corn_fufu_couscous_mais.jpg", cat: "Sides", price: 5 },
     { file: "crepes.jpg", cat: "Desserts", price: 6 },
@@ -46,44 +38,21 @@ const rawMenuItems = [
     { file: "fish_rolls_pastries.jpg", cat: "Starters", price: 3 },
     { file: "fried fish.jpg", cat: "Mains", price: 20 },
     { file: "fried vegetable.jpg", cat: "Mains", price: 14 },
-    { file: "fried_dough_balls.png", cat: "Starters", price: 4 },
-    { file: "fried_dough_balls_1.png", cat: "Starters", price: 4 },
-    { file: "fried_pastries.jpg", cat: "Starters", price: 3.5 },
-    { file: "fried_pastries_8.jpg", cat: "Starters", price: 3.5 },
-    { file: "lunch-box.jpg", cat: "Specials", price: 12 },
-    { file: "meat-brochettes.jpg", cat: "Grill", price: 4 },
-    { file: "meat-pie-raw.jpg", cat: "Starters", price: 3 },
     { file: "meat-pie.jpg", cat: "Starters", price: 3.5 },
     { file: "ndole-fish-meal.jpg", cat: "Mains", price: 22 },
     { file: "ndole_bitterleaf_stew.jpg", cat: "Mains", price: 18 },
     { file: "okra_soup_with_meat_fish.jpg", cat: "Mains", price: 18 },
-    { file: "party-menu.jpg", cat: "Specials", price: 60 },
-    { file: "party-menu1.jpg", cat: "Specials", price: 60 },
-    { file: "party-platter.jpg.jpg", cat: "Specials", price: 55 },
     { file: "pepper_sauce_piment.jpg", cat: "Sides", price: 2 },
     { file: "pili-pili.jpg", cat: "Sides", price: 2 },
     { file: "plantain-meat_mix.jpg", cat: "Starters", price: 8 },
     { file: "poisson_frit_fried_fish.jpg", cat: "Mains", price: 15 },
     { file: "puff puff.jpg", cat: "Starters", price: 4 },
     { file: "rice-sauce-meal.jpg", cat: "Mains", price: 16 },
-    { file: "roasted_chicken_.jpg", cat: "Mains", price: 14 },
-    { file: "roasted_chicken_1.jpg", cat: "Mains", price: 14 },
-    { file: "roasted_chicken_2.jpg", cat: "Mains", price: 14 },
     { file: "rolled-meat-pie.jpg", cat: "Starters", price: 4 },
-    { file: "rolled_crepes_0.webp", cat: "Desserts", price: 5 },
-    { file: "rolled_crepes_1.jpg", cat: "Desserts", price: 5 },
-    { file: "rolled_crepes_2.jpg", cat: "Desserts", price: 5 },
     { file: "rosted fish.jpg", cat: "Mains", price: 16 },
     { file: "rosted_fish_plantain.jpg", cat: "Mains", price: 18 },
     { file: "salad.jpg", cat: "Starters", price: 8 },
-    { file: "salad_vinaigrette_0.jpg", cat: "Starters", price: 7 },
-    { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 7 },
-    { file: "salad_vinaigrette_2.jpg", cat: "Starters", price: 7 },
-    { file: "salade.jpg", cat: "Starters", price: 8 },
     { file: "sauce_arachide_peanut_soup.jpg", cat: "Mains", price: 17 },
-    { file: "sliced_cake_1.jpg", cat: "Desserts", price: 5 },
-    { file: "sliced_cake_2.jpg", cat: "Desserts", price: 5 },
-    { file: "soya-brochettes-grill.jpg", cat: "Grill", price: 4 },
     { file: "soya_beef_skewer.jpg", cat: "Grill", price: 4 },
     { file: "steamed-spaghetti.jpg", cat: "Mains", price: 15 },
     { file: "stew.jpg", cat: "Mains", price: 14 },
@@ -149,8 +118,8 @@ const FullMenu: React.FC = () => {
                         <button
                             onClick={() => setActiveCategory("All")}
                             className={`px-5 py-2 rounded-full font-bold uppercase text-xs tracking-wider transition-all ${activeCategory === "All"
-                                    ? "bg-charcoal text-maaviiYellow shadow-md"
-                                    : "bg-white text-charcoal border border-charcoal/10 hover:bg-gray-100"
+                                ? "bg-charcoal text-maaviiYellow shadow-md"
+                                : "bg-white text-charcoal border border-charcoal/10 hover:bg-gray-100"
                                 }`}
                         >
                             All
@@ -160,8 +129,8 @@ const FullMenu: React.FC = () => {
                                 key={category}
                                 onClick={() => setActiveCategory(category)}
                                 className={`px-5 py-2 rounded-full font-bold uppercase text-xs tracking-wider transition-all ${activeCategory === category
-                                        ? "bg-charcoal text-maaviiYellow shadow-md"
-                                        : "bg-white text-charcoal border border-charcoal/10 hover:bg-gray-100"
+                                    ? "bg-charcoal text-maaviiYellow shadow-md"
+                                    : "bg-white text-charcoal border border-charcoal/10 hover:bg-gray-100"
                                     }`}
                             >
                                 {category}
