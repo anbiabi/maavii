@@ -2,11 +2,15 @@
 
 import React, { useState, useMemo } from 'react';
 import Container from './ui/Container';
+import { useCart } from '@/context/CartContext';
+import { MenuItem as BaseMenuItem } from '@/types';
 
-interface MenuItem {
+// Local interface for display and logic
+interface UIDisplayMenuItem {
     id: string;
     name: string;
-    price: string;
+    priceNum: number;
+    priceStr: string;
     description: string;
     category: string;
     image: string;
@@ -60,15 +64,18 @@ const rawMenuItems = [
 ];
 
 const FullMenu: React.FC = () => {
+    const { addToCart } = useCart();
+    const [addedId, setAddedId] = useState<string | null>(null);
+
     // Generate menu items efficiently
-    const menuItems: MenuItem[] = useMemo(() => {
+    const menuItems: UIDisplayMenuItem[] = useMemo(() => {
         return rawMenuItems.map((item, index) => {
             // Clean up name
             let name = item.file
                 .replace(/\.(jpg|jpeg|png|webp)$/i, '') // remove extension
                 .replace(/^\d+[_ ]*/, '') // remove leading numbers
                 .replace(/[_]/g, ' ') // replace underscores with spaces
-                .replace(/([A-Z])/g, ' $1') // space before caps if camelCase (unlikely here but good practice)
+                .replace(/([A-Z])/g, ' $1') // space before caps if camelCase
                 .trim();
 
             // Capitalize First Letter of each word
@@ -77,7 +84,8 @@ const FullMenu: React.FC = () => {
             return {
                 id: `menu-item-${index}`,
                 name: name,
-                price: formatPrice(item.price),
+                priceNum: item.price,
+                priceStr: formatPrice(item.price),
                 description: `Authentic ${name.toLowerCase()} prepared with fresh ingredients and traditional spices.`,
                 category: item.cat,
                 image: `/images/food/${item.file}`
@@ -95,6 +103,22 @@ const FullMenu: React.FC = () => {
             item.description.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesCategory && matchesSearch;
     });
+
+    const handleAddToCart = (item: UIDisplayMenuItem) => {
+        // Construct the expected MenuItem type for the context
+        const contextItem: BaseMenuItem = {
+            id: item.id,
+            name: { EN: item.name, KR: item.name }, // Simple mapping for now
+            description: { EN: item.description, KR: item.description },
+            price: item.priceNum,
+            category: item.category.toLowerCase() as any,
+            image: item.image
+        };
+
+        addToCart(contextItem);
+        setAddedId(item.id);
+        setTimeout(() => setAddedId(null), 1500);
+    };
 
     return (
         <section className="py-24 bg-cream min-h-screen">
@@ -157,46 +181,61 @@ const FullMenu: React.FC = () => {
 
                 {/* Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-                    {filteredItems.map((item) => (
-                        <div key={item.id} className="group bg-white rounded-[2.5rem] overflow-hidden border border-charcoal/5 shadow-sm hover:shadow-2xl hover:border-maaviiOrange/30 transition-all duration-500 flex flex-col h-full transform hover:-translate-y-1">
+                    {filteredItems.map((item) => {
+                        const isJustAdded = addedId === item.id;
 
-                            {/* Image Container */}
-                            <div className="aspect-[4/3] relative overflow-hidden bg-gray-100">
-                                <img
-                                    src={item.image}
-                                    alt={item.name}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    loading="lazy"
-                                />
-                                {/* Overlay Gradient */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                        return (
+                            <div key={item.id} className="group bg-white rounded-[2.5rem] overflow-hidden border border-charcoal/5 shadow-sm hover:shadow-2xl hover:border-maaviiOrange/30 transition-all duration-500 flex flex-col h-full transform hover:-translate-y-1">
 
-                                {/* Price Tag */}
-                                <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full text-charcoal font-black shadow-lg border border-charcoal/10">
-                                    {item.price}
-                                </div>
-                            </div>
+                                {/* Image Container */}
+                                <div className="aspect-[4/3] relative overflow-hidden bg-gray-100">
+                                    <img
+                                        src={item.image}
+                                        alt={item.name}
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        loading="lazy"
+                                    />
+                                    {/* Overlay Gradient */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
 
-                            {/* Content */}
-                            <div className="p-8 flex flex-col flex-grow relative">
-                                <div className="absolute -top-6 right-8 w-12 h-12 bg-maaviiOrange rounded-full flex items-center justify-center shadow-lg text-white group-hover:scale-110 transition-transform">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                                    </svg>
+                                    {/* Price Tag */}
+                                    <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full text-charcoal font-black shadow-lg border border-charcoal/10">
+                                        {item.priceStr}
+                                    </div>
                                 </div>
 
-                                <span className="text-[10px] font-black text-maaviiOrange uppercase tracking-[0.2em] mb-3 block">
-                                    {item.category}
-                                </span>
-                                <h3 className="text-2xl font-black text-charcoal mb-3 leading-tight group-hover:text-maaviiTeal transition-colors">
-                                    {item.name}
-                                </h3>
-                                <p className="text-charcoal/60 font-serif text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
-                                    {item.description}
-                                </p>
+                                {/* Content */}
+                                <div className="p-8 flex flex-col flex-grow relative">
+                                    <button
+                                        onClick={() => handleAddToCart(item)}
+                                        className={`absolute -top-6 right-8 w-12 h-12 rounded-full flex items-center justify-center shadow-lg text-white transition-all duration-300 transform ${isJustAdded ? 'bg-maaviiTeal scale-125 rotate-12' : 'bg-maaviiOrange hover:scale-110'
+                                            }`}
+                                        title="Add to Cart"
+                                    >
+                                        {isJustAdded ? (
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        ) : (
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                            </svg>
+                                        )}
+                                    </button>
+
+                                    <span className="text-[10px] font-black text-maaviiOrange uppercase tracking-[0.2em] mb-3 block">
+                                        {item.category}
+                                    </span>
+                                    <h3 className="text-2xl font-black text-charcoal mb-3 leading-tight group-hover:text-maaviiTeal transition-colors">
+                                        {item.name}
+                                    </h3>
+                                    <p className="text-charcoal/60 font-serif text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
+                                        {item.description}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
 
                 {filteredItems.length === 0 && (
