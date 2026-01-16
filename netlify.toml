@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "send-email": {
+      "schedule": "@daily"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFFDF5;
+  --foreground: #1A1A1A;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geologica);
+  --font-serif: var(--font-lora);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-serif);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+}
+
+.african-pattern {
+  background-color: #FBBF24;
+  background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
+}
+
+.tribal-border {
+  border-image: repeating-linear-gradient(45deg, #EA580C, #EA580C 10px, #FBBF24 10px, #FBBF24 20px, #0D9488 20px, #0D9488 30px) 20;
+}
+
+.logo-circle {
+  background: radial-gradient(circle, #EAB308 0%, #A16207 100%);
+  border: 4px double #451a03;
+}
