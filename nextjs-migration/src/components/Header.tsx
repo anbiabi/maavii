@@ -1,8 +1,6 @@
-"use client";
-"use client";
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ShoppingCart, Globe } from 'lucide-react';
@@ -67,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
         >
           <Logo size="md" />
           <div className="hidden lg:block leading-none">
-            <span className="font-extrabold text-2xl tracking-tighter text-charcoal uppercase">MAAVII'S</span>
+            <span className="font-extrabold text-2xl tracking-tighter text-charcoal uppercase">MAAVII&apos;S</span>
             <p className="text-[10px] font-bold text-maaviiTeal uppercase tracking-[0.2em]">CUISINE</p>
           </div>
         </Link>

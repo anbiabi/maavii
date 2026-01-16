@@ -1,14 +1,10 @@
-import Menu from '@/components/Menu';
+import FullMenu from '@/components/FullMenu';
 
 export const metadata = {
-    title: 'Maavii | Menu',
-    description: 'Explore our fusion menu featuring African and Korean flavors.',
+    title: 'Maavii | Full Menu',
+    description: 'Explore our complete selection of African & Korean fusion dishes.',
 };
 
 export default function MenuPage() {
-    return (
-        <div className="pt-24 min-h-screen bg-cream text-charcoal">
-            <Menu />
-        </div>
-    );
+    return <FullMenu />;
 }

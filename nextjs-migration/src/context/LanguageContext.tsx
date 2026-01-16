@@ -23,7 +23,9 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
   });
 
   useEffect(() => {
-    localStorage.setItem('maavii_lang', language);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('maavii_lang', language);
+    }
   }, [language]);
 
   const t = (key: string) => {

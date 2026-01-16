@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ShoppingBag, Clock, Truck, MapPin, Phone, MessageCircle, Plus } from 'lucide-react';
+import { Clock, Truck, MapPin, Phone, MessageCircle, Plus } from 'lucide-react';
 import Container from './ui/Container';
 import SectionTitle from './ui/SectionTitle';
 import { MENU_ITEMS } from '../constants';
@@ -10,7 +10,7 @@ import { useCart } from '../context/CartContext';
 
 const OrderingSection: React.FC = () => {
     const [selectedService, setSelectedService] = useState<'order-ahead' | 'delivery' | 'pickup'>('order-ahead');
-    const { t, language } = useLanguage();
+    const { language } = useLanguage();
     const { addToCart } = useCart();
 
     // Show a subset of items for the quick view
@@ -57,10 +57,10 @@ const OrderingSection: React.FC = () => {
                         return (
                             <button
                                 key={service.id}
-                                onClick={() => setSelectedService(service.id as any)}
+                                onClick={() => setSelectedService(service.id as 'order-ahead' | 'delivery' | 'pickup')}
                                 className={`p-8 rounded-[2rem] border-4 transition-all ${selectedService === service.id
-                                        ? `${service.color} text-cream border-charcoal shadow-2xl -translate-y-2`
-                                        : 'bg-cream border-charcoal/5 text-charcoal hover:border-charcoal/20'
+                                    ? `${service.color} text-cream border-charcoal shadow-2xl -translate-y-2`
+                                    : 'bg-cream border-charcoal/5 text-charcoal hover:border-charcoal/20'
                                     }`}
                             >
                                 <Icon className="w-12 h-12 mx-auto mb-4" />

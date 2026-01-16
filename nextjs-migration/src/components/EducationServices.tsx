@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { BookOpen, Users, ChefHat, Award, Calendar, Clock } from 'lucide-react';
+import { Users, ChefHat, Award, Calendar, Clock } from 'lucide-react';
 import Container from './ui/Container';
 import SectionTitle from './ui/SectionTitle';
 
@@ -94,7 +94,7 @@ const EducationServices: React.FC = () => {
             date: 'March 22, 2026',
             time: '7:00 PM - 10:00 PM',
             location: 'Maavii Restaurant',
-            description: 'Chef\'s special 5-course fusion menu with wine pairings'
+            description: 'Chef&apos;s special 5-course fusion menu with wine pairings'
         },
         {
             title: 'Beginner Cooking Workshop',
@@ -140,10 +140,10 @@ const EducationServices: React.FC = () => {
                         return (
                             <button
                                 key={tab.id}
-                                onClick={() => setActiveTab(tab.id as any)}
+                                onClick={() => setActiveTab(tab.id as 'workshops' | 'training' | 'catering' | 'events')}
                                 className={`flex items-center gap-2 px-6 py-4 rounded-xl font-bold transition-all border-3 ${activeTab === tab.id
-                                        ? 'bg-maaviiTeal text-cream border-charcoal'
-                                        : 'bg-cream border-charcoal/10 text-charcoal hover:border-maaviiTeal'
+                                    ? 'bg-maaviiTeal text-cream border-charcoal'
+                                    : 'bg-cream border-charcoal/10 text-charcoal hover:border-maaviiTeal'
                                     }`}
                             >
                                 <Icon className="w-5 h-5" />
@@ -254,7 +254,7 @@ const EducationServices: React.FC = () => {
                         <div className="p-8 bg-maaviiYellow/10 rounded-2xl border-3 border-maaviiYellow">
                             <h4 className="text-2xl font-black text-charcoal mb-4">Catering Inquiry Form</h4>
                             <p className="text-charcoal/70 font-serif mb-6">
-                                Tell us about your event and we'll create a customized catering proposal just for you.
+                                Tell us about your event and we&apos;ll create a customized catering proposal just for you.
                             </p>
                             <button className="px-8 py-4 bg-charcoal text-cream rounded-lg font-black hover:bg-maaviiOrange transition-colors">
                                 Start Catering Inquiry

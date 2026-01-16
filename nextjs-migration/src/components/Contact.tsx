@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
           <div className="p-8 rounded-[2rem] border-4 border-dashed border-maaviiYellow/30 bg-maaviiYellow/5">
             <div className="flex gap-4">
               <MapPin className="text-maaviiYellow w-8 h-8 shrink-0" />
-              <p className="text-xl font-bold">Based in Yangsan, South Korea. Check our IG Stories for today's parking spot!</p>
+              <p className="text-xl font-bold">Based in Yangsan, South Korea. Check our IG Stories for today&apos;s parking spot!</p>
             </div>
           </div>
         </div>

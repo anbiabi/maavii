@@ -26,7 +26,9 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   });
 
   useEffect(() => {
-    localStorage.setItem('maavii_cart', JSON.stringify(cart));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('maavii_cart', JSON.stringify(cart));
+    }
   }, [cart]);
 
   const addToCart = (item: MenuItem) => {

@@ -43,7 +43,7 @@ const FusionConcept: React.FC = () => {
                                 Fusion on Wheels
                             </h2>
                             <p className="text-xl text-charcoal/70 font-serif italic border-l-4 border-maaviiOrange pl-6 leading-relaxed">
-                                "We are taking our signature Afro-Korean fusion to the streets. Experience the vibrant culture and taste of Maavii at festivals, markets, and private events."
+                                &ldquo;We are taking our signature Afro-Korean fusion to the streets. Experience the vibrant culture and taste of Maavii at festivals, markets, and private events.&rdquo;
                             </p>
                         </div>
 

@@ -4,7 +4,6 @@ import React from 'react';
 import Link from 'next/link';
 import { Instagram } from 'lucide-react';
 import Container from './ui/Container';
-import SectionTitle from './ui/SectionTitle';
 
 const CulinaryGallery: React.FC = () => {
     const images = [
