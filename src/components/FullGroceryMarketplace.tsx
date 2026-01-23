@@ -50,7 +50,7 @@ const FullGroceryMarketplace: React.FC = () => {
             category: 'Spices & Seasonings',
             price: 7000,
             origin: 'Africa',
-            image: '/images/grocery/piment.jpg',
+            image: '/images/piment.jpg',
             description: 'African pepper sauce for spicy flavoring in traditional dishes.'
         },
         {
@@ -61,15 +61,6 @@ const FullGroceryMarketplace: React.FC = () => {
             origin: 'Africa',
             image: '/images/grocery/Ndole.jpg',
             description: 'Fresh bitter leaves used for the famous Ndole dish.'
-        },
-        {
-            id: 6,
-            name: 'Water Fufu (Fermented Cassava)',
-            category: 'Grains & Legumes',
-            price: 4500,
-            origin: 'Africa',
-            image: '/images/grocery/water_fufu_fermented_cassava.jpg',
-            description: 'Fermented cassava dough for traditional fufu preparation.'
         },
         {
             id: 7,

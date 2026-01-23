@@ -1,2 +1,5 @@
-[00:00:01.716] Server  LOG     ✓ Ready in 1266ms
-[00:00:04.194] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.594] Server  LOG     ✓ Ready in 1128ms
+[00:00:04.651] Server  LOG     ○ Compiling /menu ...
+[00:00:08.333] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:39.922] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:55.421] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
