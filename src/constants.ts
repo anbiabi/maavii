@@ -161,5 +161,37 @@ export const MENU_ITEMS: MenuItem[] = [
     description: { EN: 'Light and refreshing salad with tangy vinaigrette.', KR: '상큼한 비네그레트 드레싱의 가벼운 샐러드.' },
     price: 11000,
     image: '/images/food/salad_vinaigrette_1.jpg'
+  },
+  {
+    id: '14',
+    category: 'special',
+    name: { EN: 'Party Platter Special', KR: '파티 플래터 스페셜' },
+    description: { EN: 'Perfect for gatherings! Assorted dishes serving 4-6 people.', KR: '모임에 완벽! 4-6인분의 다양한 요리.' },
+    price: 55000,
+    image: '/images/food/party-platter.jpg.jpg'
+  },
+  {
+    id: '15',
+    category: 'special',
+    name: { EN: 'Lunch Box Combo', KR: '런치박스 콤보' },
+    description: { EN: 'Complete meal in a convenient box with rice, protein, and sides.', KR: '밥, 단백질, 반찬이 포함된 편리한 박스 식사.' },
+    price: 15000,
+    image: '/images/food/lunch-box.jpg'
+  },
+  {
+    id: '16',
+    category: 'special',
+    name: { EN: 'Party Menu Deluxe', KR: '파티 메뉴 디럭스' },
+    description: { EN: 'Grand feast with multiple dishes, perfect for celebrations.', KR: '축하 행사에 완벽한 여러 요리가 포함된 성대한 잔치.' },
+    price: 75000,
+    image: '/images/food/party-menu1.jpg'
+  },
+  {
+    id: '17',
+    category: 'special',
+    name: { EN: 'All Menu Sampler', KR: '전메뉴 샘플러' },
+    description: { EN: 'Taste everything! A variety of our signature dishes.', KR: '모든 메뉴를 맛보세요! 다양한 시그니처 요리.' },
+    price: 45000,
+    image: '/images/food/all_menu.jpg'
   }
 ];

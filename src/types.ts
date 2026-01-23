@@ -1,7 +1,7 @@
 
 export type Language = 'EN' | 'KR';
 
-export type Category = 'main' | 'snack';
+export type Category = 'main' | 'snack' | 'special';
 
 export interface MenuItem {
   id: string;
