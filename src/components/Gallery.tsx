@@ -36,6 +36,10 @@ const images = [
   { src: '/images/20250927_172708.jpg', alt: 'Chef presentation' },
   { src: '/images/20250930_065334.jpg', alt: 'Traditional cooking method' },
   { src: '/images/DSC_0167.JPG', alt: 'Traditional African meal' },
+  { src: '/images/food/salad.jpg', alt: 'Fresh garden salad' },
+  { src: '/images/food/salade.jpg', alt: 'African salad bowl' },
+  { src: '/images/food/salad_vinaigrette_1.jpg', alt: 'Vinaigrette salad' },
+  { src: '/images/food/salad_vinaigrette_0.jpg', alt: 'Salad with vinaigrette dressing' },
 ];
 
 export default function Gallery() {

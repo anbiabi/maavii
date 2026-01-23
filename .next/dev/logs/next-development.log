@@ -11,3 +11,10 @@
 [00:27:15.071] Server  LOG     ✓ Compiled in 193ms
 [00:27:25.097] Server  LOG     ✓ Compiled in 329ms
 [00:28:36.221] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:33:41.589] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./src/constants.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:33:41.591] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./src/constants.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:33:41.611] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./src/constants.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:33:41.618] Server  LOG     ✓ Compiled in 67ms
+[00:33:43.733] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:33:44.305] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:33:44.569] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

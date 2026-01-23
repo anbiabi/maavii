@@ -137,5 +137,29 @@ export const MENU_ITEMS: MenuItem[] = [
     description: { EN: 'Delicate crepes rolled with sweet or savory fillings.', KR: '달콤하거나 짭짤히 속을 채운 부드러운 롤 크레페.' },
     price: 9000,
     image: '/images/food/11_rolled_crepes_panquecas.jpg'
+  },
+  {
+    id: '11',
+    category: 'main',
+    name: { EN: 'Fresh Garden Salad', KR: '신선한 가든 샐러드' },
+    description: { EN: 'Crisp mixed greens with house vinaigrette dressing.', KR: '하우스 비네그레트 드레싱을 곁들인 신선한 혼합 채소.' },
+    price: 12000,
+    image: '/images/food/salad.jpg'
+  },
+  {
+    id: '12',
+    category: 'main',
+    name: { EN: 'African Salad Bowl', KR: '아프리카 샐러드 보울' },
+    description: { EN: 'Traditional African salad with authentic spices and dressing.', KR: '정통 향신료와 드레싱을 곁들인 전통 아프리카 샐러드.' },
+    price: 13000,
+    image: '/images/food/salade.jpg'
+  },
+  {
+    id: '13',
+    category: 'main',
+    name: { EN: 'Vinaigrette Salad', KR: '비네그레트 샐러드' },
+    description: { EN: 'Light and refreshing salad with tangy vinaigrette.', KR: '상큼한 비네그레트 드레싱의 가벼운 샐러드.' },
+    price: 11000,
+    image: '/images/food/salad_vinaigrette_1.jpg'
   }
 ];
