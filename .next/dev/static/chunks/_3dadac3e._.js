@@ -405,7 +405,35 @@ const MENU_ITEMS = [
             KR: '축하 행사에 완벽한 여러 요리가 포함된 성대한 잔치.'
         },
         price: 75000,
-        image: '/images/food/party-menu1.jpg'
+        image: '/images/food/party-menu.jpg'
+    },
+    {
+        id: '18',
+        category: 'special',
+        name: {
+            EN: 'Celebration Table',
+            KR: '축하 테이블'
+        },
+        description: {
+            EN: 'Elegant party spread with diverse African specialties.',
+            KR: '다양한 아프리카 특선 요리가 있는 우아한 파티 스프레드.'
+        },
+        price: 85000,
+        image: '/images/food/Party_table.jpg'
+    },
+    {
+        id: '19',
+        category: 'special',
+        name: {
+            EN: 'Ndole Fish Feast',
+            KR: '은돌레 생선 정식'
+        },
+        description: {
+            EN: 'Traditional Cameroonian ndole with fresh fish and sides.',
+            KR: '신선한 생선과 반찬이 있는 전통 카메룬 은돌레.'
+        },
+        price: 32000,
+        image: '/images/food/ndole-fish-meal.jpg'
     },
     {
         id: '17',
