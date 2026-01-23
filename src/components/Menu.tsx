@@ -1,36 +1,20 @@
+"use client";
 
 import React, { useState, useMemo } from 'react';
-import { Plus, Flame, Search, X, Camera } from 'lucide-react';
+import { Plus, Flame, Search, X } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useCart } from '../context/CartContext';
 import { MENU_ITEMS } from '../constants';
+import { Category } from '../types';
 
-type Category = 'all' | 'main' | 'snack';
+type FilterCategory = 'all' | Category;
 
 const Menu: React.FC = () => {
   const { t, language } = useLanguage();
   const { addToCart } = useCart();
-  const [activeCategory, setActiveCategory] = useState<Category>('all');
+  const [activeCategory, setActiveCategory] = useState<FilterCategory>('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [uploadedImages, setUploadedImages] = useState<Record<string, string>>({});
-
-  const handleImageUpload = (itemId: string, event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        setUploadedImages(prev => ({
-          ...prev,
-          [itemId]: e.target?.result as string
-        }));
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const getImageSrc = (itemId: string, defaultSrc: string) => {
-    return uploadedImages[itemId] || defaultSrc;
-  };
+  const [addedIds, setAddedIds] = useState<Set<string>>(new Set());
 
   const filteredItems = useMemo(() => {
     return MENU_ITEMS.filter(item => {
@@ -42,6 +26,18 @@ const Menu: React.FC = () => {
     });
   }, [activeCategory, searchTerm, language]);
 
+  const handleAddToCart = (item: typeof MENU_ITEMS[0]) => {
+    addToCart(item);
+    setAddedIds(prev => new Set(prev).add(item.id));
+    setTimeout(() => {
+      setAddedIds(prev => {
+        const newSet = new Set(prev);
+        newSet.delete(item.id);
+        return newSet;
+      });
+    }, 1500);
+  };
+
   return (
     <section id="menu" className="py-24 px-4 bg-maaviiYellow/10 scroll-mt-24">
       <div className="max-w-7xl mx-auto">
@@ -49,15 +45,6 @@ const Menu: React.FC = () => {
           <h2 className="text-5xl md:text-7xl font-black text-charcoal uppercase tracking-tighter">
             Our <span className="text-maaviiOrange italic">Original Menu</span>
           </h2>
-          <p className="text-xl text-charcoal/70 max-w-3xl mx-auto font-serif italic">
-            Explore our full menu with detailed descriptions and stunning imagery
-          </p>
-          <a 
-            href="/standaloneMenu" 
-            className="inline-block px-8 py-4 bg-charcoal text-maaviiYellow rounded-2xl font-black text-xl hover:bg-maaviiOrange hover:text-white transition-all hover:scale-105 shadow-xl"
-          >
-            View Full Menu
-          </a>
 
           <div className="max-w-2xl mx-auto relative group">
             <div className="absolute inset-y-0 left-6 flex items-center pointer-events-none">
@@ -114,14 +101,6 @@ const Menu: React.FC = () => {
           </div>
         </div>
 
-        <div className="mb-8 text-right">
-          <a 
-            href="/standaloneMenu" 
-            className="inline-block px-6 py-3 bg-maaviiOrange text-cream rounded-xl font-bold hover:bg-orange-700 transition-colors"
-          >
-            View Full Menu Page
-          </a>
-        </div>
         {filteredItems.length === 0 ? (
           <div className="text-center py-20 bg-cream/50 rounded-[3rem] border-4 border-dashed border-charcoal/10">
             <div className="max-w-md mx-auto space-y-6">
@@ -139,51 +118,63 @@ const Menu: React.FC = () => {
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {filteredItems.map(item => (
-              <div key={item.id} className="group relative bg-cream rounded-[2.5rem] overflow-hidden border-4 border-charcoal/5 hover:border-maaviiOrange hover:shadow-2xl transition-all flex flex-col">
-                <div className="relative h-72 overflow-hidden">
-                  <img 
-                    src={getImageSrc(item.id, item.image)} 
-                    alt={item.name[language]} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <label className="absolute bottom-4 right-4 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-2 cursor-pointer transition-all shadow-md">
-                    <Camera className="w-5 h-5 text-gray-600" />
-                    <input 
-                      type="file" 
-                      accept="image/*" 
-                      onChange={(e) => handleImageUpload(item.id, e)}
-                      className="hidden"
+            {filteredItems.map(item => {
+              const isJustAdded = addedIds.has(item.id);
+              
+              return (
+                <div key={item.id} className="group relative bg-cream rounded-[2.5rem] overflow-hidden border-4 border-charcoal/5 hover:border-maaviiOrange hover:shadow-2xl transition-all flex flex-col">
+                  <div className="relative h-72 overflow-hidden">
+                    <img 
+                      src={item.image} 
+                      alt={item.name[language]} 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
-                  </label>
-                  <div className="absolute bottom-4 left-4 bg-maaviiYellow px-4 py-2 rounded-xl font-black text-charcoal shadow-lg border-2 border-amber-900/10">
-                    ₩ {item.price.toLocaleString()}
-                  </div>
-                  {item.category === 'main' && (
-                    <div className="absolute top-4 right-4 bg-maaviiOrange p-2 rounded-full text-cream animate-pulse">
-                      <Flame className="w-5 h-5" />
+                    <div className="absolute bottom-4 left-4 bg-maaviiYellow px-4 py-2 rounded-xl font-black text-charcoal shadow-lg border-2 border-amber-900/10">
+                      ₩ {item.price.toLocaleString()}
                     </div>
-                  )}
-                </div>
-                
-                <div className="p-8 flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-3xl font-black text-charcoal mb-3 leading-tight uppercase tracking-tight">{item.name[language]}</h3>
-                    <p className="text-charcoal/60 font-serif text-lg leading-relaxed mb-8">
-                      {item.description[language]}
-                    </p>
+                    {item.category === 'main' && (
+                      <div className="absolute top-4 right-4 bg-maaviiOrange p-2 rounded-full text-cream animate-pulse">
+                        <Flame className="w-5 h-5" />
+                      </div>
+                    )}
                   </div>
                   
-                  <button 
-                    onClick={() => addToCart(item)}
-                    className="w-full inline-flex items-center justify-center gap-3 bg-charcoal text-cream py-5 rounded-2xl font-black text-lg hover:bg-maaviiOrange transition-all group/btn shadow-xl active:scale-95"
-                  >
-                    <Plus className="w-6 h-6 group-hover/btn:rotate-90 transition-transform" />
-                    {t('addToCart')}
-                  </button>
+                  <div className="p-8 flex-1 flex flex-col justify-between relative">
+                    <button 
+                      onClick={() => handleAddToCart(item)}
+                      className={`absolute -top-6 right-8 w-12 h-12 rounded-full flex items-center justify-center shadow-lg text-white transition-all duration-300 transform {isJustAdded ? 'bg-maaviiTeal scale-125 rotate-12' : 'bg-maaviiOrange hover:scale-110'
+                        }`}
+                      title="Add to Cart"
+                    >
+                      {isJustAdded ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                      )}
+                    </button>
+                    
+                    <div>
+                      <h3 className="text-3xl font-black text-charcoal mb-3 leading-tight uppercase tracking-tight">{item.name[language]}</h3>
+                      <p className="text-charcoal/60 font-serif text-lg leading-relaxed mb-8">
+                        {item.description[language]}
+                      </p>
+                    </div>
+                    
+                    <button 
+                      onClick={() => handleAddToCart(item)}
+                      className="w-full inline-flex items-center justify-center gap-3 bg-charcoal text-cream py-5 rounded-2xl font-black text-lg hover:bg-maaviiOrange transition-all group/btn shadow-xl active:scale-95 opacity-0 absolute top-0 left-0"
+                    >
+                      <Plus className="w-6 h-6 group-hover/btn:rotate-90 transition-transform" />
+                      {t('addToCart')}
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         )}
       </div>

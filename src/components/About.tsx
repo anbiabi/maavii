@@ -1,7 +1,9 @@
+'use client';
 
 import React from 'react';
-import { useLanguage } from '../context/LanguageContext';
+import Link from 'next/link';
 import { Heart, Globe, Utensils } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const About: React.FC = () => {
   const { t } = useLanguage();
@@ -16,14 +18,14 @@ const About: React.FC = () => {
         <div className="relative order-2 lg:order-1">
           {/* Artisanal Image Frame */}
           <div className="aspect-[4/5] rounded-[3rem] overflow-hidden border-8 border-maaviiYellow shadow-2xl relative rotate-2 transition-transform hover:rotate-0 duration-500">
-            <img 
-              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop" 
-              alt="Culinary Passion" 
+            <img
+              src="/images/maavi.png"
+              alt="Culinary Passion"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 to-transparent"></div>
           </div>
-          
+
           {/* Floating Stats or Badges */}
           <div className="absolute -bottom-6 -right-6 bg-maaviiOrange p-6 rounded-2xl shadow-xl border-4 border-cream -rotate-3 hidden md:block">
             <div className="flex items-center gap-4">
@@ -41,7 +43,7 @@ const About: React.FC = () => {
             <Utensils size={14} />
             Our Heritage
           </div>
-          
+
           <h2 className="text-5xl md:text-7xl font-black text-charcoal leading-[1.1] tracking-tighter">
             {t('aboutTitle').split(' ').map((word, i) => (
               <span key={i} className={word === "Maavii's" || word === 'Cuisine' ? 'text-maaviiOrange block' : 'inline-block mr-3'}>
@@ -61,12 +63,18 @@ const About: React.FC = () => {
 
           <div className="pt-8 border-t-2 border-dashed border-charcoal/10">
             <div className="flex flex-wrap gap-8 items-center">
-               <div className="flex items-center gap-3">
-                 <div className="w-12 h-12 bg-charcoal rounded-xl flex items-center justify-center text-maaviiYellow shadow-lg">
-                   <Globe className="w-6 h-6" />
-                 </div>
-                 <span className="font-black text-sm uppercase tracking-widest text-charcoal/60">{t('aboutBody3')}</span>
-               </div>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-charcoal rounded-xl flex items-center justify-center text-maaviiYellow shadow-lg">
+                  <Globe className="w-6 h-6" />
+                </div>
+                <span className="font-black text-sm uppercase tracking-widest text-charcoal/60">{t('aboutBody3')}</span>
+              </div>
+              
+              <div className="ml-auto">
+                <Link href="/about" className="px-6 py-3 bg-maaviiTeal text-cream rounded-xl font-black hover:bg-teal-700 transition-colors">
+                  Learn More About Us
+                </Link>
+              </div>
             </div>
           </div>
         </div>

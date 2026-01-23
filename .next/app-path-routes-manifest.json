@@ -1,0 +1,13 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/coming-soon/page": "/coming-soon",
+  "/education/page": "/education",
+  "/favicon.ico/route": "/favicon.ico",
+  "/gallery/page": "/gallery",
+  "/grocery/page": "/grocery",
+  "/menu/page": "/menu",
+  "/ordering/page": "/ordering",
+  "/page": "/",
+  "/services/page": "/services"
+}

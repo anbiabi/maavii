@@ -1,6 +1,8 @@
 
 export type Language = 'EN' | 'KR';
 
+export type Category = 'main' | 'snack';
+
 export interface MenuItem {
   id: string;
   name: {
@@ -12,7 +14,7 @@ export interface MenuItem {
     KR: string;
   };
   price: number;
-  category: string;
+  category: Category;
   image: string;
 }
 

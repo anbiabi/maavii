@@ -1,3 +1,4 @@
+"use client";
 
 import React from 'react';
 
@@ -15,9 +16,9 @@ const Footer: React.FC = () => {
               <span className="text-[10px] font-bold text-maaviiTeal uppercase tracking-[0.2em]">Global Eats</span>
             </div>
           </div>
-          
+
           <p className="text-charcoal/40 text-sm font-serif text-center md:text-left">
-            © {new Date().getFullYear()} MAAVII Cuisine. Crafted with passion & spice.<br/>
+            © {new Date().getFullYear()} MAAVII Cuisine. Crafted with passion & spice.<br />
             Proudly serving premium African & Korean fusion.
           </p>
 
