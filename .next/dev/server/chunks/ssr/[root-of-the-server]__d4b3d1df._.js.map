@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 24, "column": 0}, "map": {"version":3,"sources":["file:///home/anbiabi/Downloads/maavii/src/app/menu/page.tsx"],"sourcesContent":["import FullMenu from '@/components/FullMenu';\n\nexport const metadata = {\n    title: 'Maavii | Full Menu',\n    description: 'Explore our complete selection of African & Korean fusion dishes.',\n};\n\nexport default function MenuPage() {\n    return <FullMenu />;\n}\n"],"names":[],"mappings":";;;;;;;AAAA;;;AAEO,MAAM,WAAW;IACpB,OAAO;IACP,aAAa;AACjB;AAEe,SAAS;IACpB,qBAAO,8OAAC,yIAAQ;;;;;AACpB"}}]
-}
