@@ -1,9 +1,446 @@
-[00:00:01.779] Server  LOG     ✓ Ready in 1221ms
-[00:00:04.847] Server  LOG     ○ Compiling /menu ...
-[00:00:08.261] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:12.129] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:16.157] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:17.623] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:22:23.808] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:22:59.895] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:24:42.527] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:00:02.447] Server  LOG     ✓ Ready in 1946ms
+[00:00:43.068] Server  LOG     ○ Compiling / ...
+[00:00:46.399] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:41.009] Server  ERROR   ⨯ ./src/components/FullMenu.tsx:28:5
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |     { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |     ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+
+
+[00:01:41.216] Browser ERROR   ./src/components/FullMenu.tsx:28:5
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |     { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |     ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+[00:01:42.435] Browser ERROR   ./src/components/FullMenu.tsx:28:5
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |     { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |     ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+[00:01:42.611] Browser ERROR   ./src/components/FullMenu.tsx:28:5
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |     { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |     ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+[00:01:43.313] Browser ERROR   ./src/components/FullMenu.tsx:28:5
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |     { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |     ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+[00:01:43.438] Server  ERROR   ⨯ ./src/components/FullMenu.tsx:28:5
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |     { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |     ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+
+
+[00:01:44.040] Browser ERROR   uncaughtError: Error: ./src/components/FullMenu.tsx:28:5
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |     { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |     ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+
+
+[00:01:44.040] Browser ERROR   ./src/components/FullMenu.tsx:28:5
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |     { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |     ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+[00:01:44.144] Browser ERROR   ./src/components/FullMenu.tsx:28:5
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |     { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |     ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+[00:05:09.250] Server  ERROR   ⨯ ./src/components/FullMenu.tsx:28:5
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |     { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |     ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+
+
+[00:05:09.663] Browser ERROR   uncaughtError: Error: ./src/components/FullMenu.tsx:28:5
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |     { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |     ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+
+
+[00:05:09.854] Browser ERROR   ./src/components/FullMenu.tsx:28:5
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |     { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |     ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+[00:05:09.854] Browser ERROR   ./src/components/FullMenu.tsx:28:5
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |     { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |     ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+[00:05:12.482] Server  ERROR   ⨯ ./src/components/FullMenu.tsx:28:5
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |     { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |     ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+
+
+[00:05:13.078] Browser ERROR   uncaughtError: Error: ./src/components/FullMenu.tsx:28:5
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |     { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |     ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+
+
+[00:05:13.078] Browser ERROR   ./src/components/FullMenu.tsx:28:5
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |     { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |     ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+[00:05:13.078] Browser ERROR   ./src/components/FullMenu.tsx:28:5
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |     { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |     ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+[00:06:05.653] Browser ERROR   ./src/components/FullMenu.tsx:28:2
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |  { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |  ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+[00:06:08.317] Browser ERROR   ./src/components/FullMenu.tsx:28:1
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 | { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     | ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+[00:06:13.268] Browser ERROR   ./src/components/FullMenu.tsx:28:4
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |    { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |    ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+[00:06:14.449] Browser ERROR   ./src/components/FullMenu.tsx:28:5
+Parsing ecmascript source code failed
+  26 |     { file: "04_fried_dough_balls_bolinho.jpg", cat: "Starters", price: 3 },
+  27 |     { file: "croquettes.jpg", cat: "Starters", price: 3 }
+> 28 |     { file: "salad_vinaigrette_1.jpg", cat: "Starters", price: 3 },
+     |     ^
+  29 |     { file: "salade.jpg", cat: "Starters", price: 3 },
+  30 |     { file: "07_bundt_ring_cake.jpg", cat: "Desserts", price: 4 },
+  31 |     { file: "08_sliced_sponge_cake.jpg", cat: "Desserts", price: 5 },
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+[00:07:22.381] Server  LOG     ✓ Compiled in 266ms
+[00:07:23.852] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:34.722] Server  LOG     ✓ Compiled in 91ms
+[00:09:37.133] Server  LOG     ✓ Compiled in 154ms
+[00:10:10.719] Server  LOG     ✓ Compiled in 130ms
+[00:10:12.510] Server  LOG     ✓ Compiled in 68ms
+[00:10:22.455] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:04.802] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:08.437] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:22.562] Server  LOG     ✓ Compiled in 180ms
+[00:13:26.235] Server  LOG     ✓ Compiled in 138ms
+[00:13:30.739] Server  LOG     ✓ Compiled in 322ms
+[00:15:16.887] Server  LOG     ✓ Compiled in 227ms
+[00:15:25.499] Server  LOG     ✓ Compiled in 151ms
+[00:15:25.678] Browser ERROR   ./src/components/FullMenu.tsx:71:14
+Parsing ecmascript source code failed
+  69 |     { file: "stew.jpg", cat: "Mains", price: 12 },
+  70 |     { file: "water_fufu.jpg", cat: "Sides", price: 4 },
+> 71 |     couscous stew
+     |              ^^^^
+  72 | ];
+  73 |
+  74 | const FullMenu: React.FC = () => {
+
+Expected ',', got 'stew'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+[00:15:49.391] Browser ERROR   ./src/components/FullMenu.tsx:72:14
+Parsing ecmascript source code failed
+  70 |     { file: "water_fufu.jpg", cat: "Sides", price: 4 },
+  71 |     
+> 72 |     couscous stew
+     |              ^^^^
+  73 | ];
+  74 |
+  75 | const FullMenu: React.FC = () => {
+
+Expected ',', got 'stew'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+[00:15:51.668] Browser ERROR   ./src/components/FullMenu.tsx:72:14
+Parsing ecmascript source code failed
+  70 |     { file: "water_fufu.jpg", cat: "Sides", price: 4 },
+  71 |     { file: "stew.jpg", cat: "Mains", price: 12 },
+> 72 |     couscous stew
+     |              ^^^^
+  73 | ];
+  74 |
+  75 | const FullMenu: React.FC = () => {
+
+Expected ',', got 'stew'
+
+Import trace:
+  Server Component:
+    ./src/components/FullMenu.tsx
+    ./src/app/menu/page.tsx
+[00:16:07.909] Server  LOG     ✓ Compiled in 110ms
+[00:16:16.160] Server  LOG     ✓ Compiled in 78ms
+[00:16:17.697] Server  LOG     ✓ Compiled in 86ms
+[00:16:19.004] Server  LOG     ✓ Compiled in 68ms
+[00:16:44.943] Server  LOG     ✓ Compiled in 105ms
+[00:17:00.915] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:31.721] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:32.937] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:48:10.218] Server  LOG     ✓ Compiled in 419ms
+[00:48:12.179] Server  LOG     ✓ Compiled in 192ms
+[00:48:45.262] Server  LOG     ✓ Compiled in 190ms
+[00:50:46.722] Server  LOG     ✓ Compiled in 135ms
+[00:50:54.474] Server  LOG     ✓ Compiled in 98ms
+[00:51:50.057] Server  LOG     ✓ Compiled in 82ms
+[00:52:30.147] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:52:40.620] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:53:37.802] Server  LOG     ✓ Compiled in 159ms
+[00:53:42.436] Server  LOG     ✓ Compiled in 261ms
+[00:57:24.615] Server  LOG     ✓ Compiled in 104ms
+[00:57:27.718] Server  LOG     ✓ Compiled in 95ms
+[01:02:02.043] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:06:54.671] Server  LOG     ○ Compiling /services ...
+[01:06:55.673] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:10:51.508] Server  LOG     ✓ Compiled in 105ms
+[01:18:37.200] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:21:15.362] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:22:49.397] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:24:57.617] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:42:59.962] Server  LOG     ✓ Compiled in 6.7s
+[01:43:01.448] Server  LOG     ✓ Compiled in 81ms
+[01:44:21.036] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

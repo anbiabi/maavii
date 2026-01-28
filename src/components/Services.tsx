@@ -19,7 +19,7 @@ export default function Services() {
       title: 'Cooking Classes',
       icon: GraduationCap,
       description: 'Learn the art of African & Fusion cuisine with our expert chefs.',
-      image: '/images/20250927_172607.jpg', // Image of cooking or food preparation
+      image: '/images/food/Breads.jpg', // Image of cooking or food preparation
       details: 'Join our hands-on cooking classes where you\'ll learn traditional techniques and modern fusion approaches. From basic knife skills to mastering complex flavors, our classes cater to all skill levels.',
       anchor: 'cooking'
     },

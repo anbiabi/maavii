@@ -50,7 +50,7 @@ const FullGallery: React.FC = () => {
     '/images/food/soya_beef_skewer.jpg',
     '/images/food/steamed-spaghetti.jpg',
     '/images/food/stew.jpg',
-    '/images/food/water_fufu_fermented_cassava.jpg',
+    '/images/food/water_fufu.jpg',
     '/images/DSC_0167.JPG',
     '/images/20250927_172607.jpg',
     '/images/20250930_065334.jpg',

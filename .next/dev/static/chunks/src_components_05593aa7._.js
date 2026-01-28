@@ -52,7 +52,7 @@ const rawMenuItems = [
     {
         file: "02_roasted_chicken_pieces.jpg",
         cat: "Mains",
-        price: 15
+        price: 4
     },
     {
         file: "03_chicken_vegetable_skewers.jpg",
@@ -62,20 +62,35 @@ const rawMenuItems = [
     {
         file: "04_fried_dough_balls_bolinho.jpg",
         cat: "Starters",
+        price: 3
+    },
+    {
+        file: "croquettes.jpg",
+        cat: "Starters",
+        price: 3
+    },
+    {
+        file: "salad_vinaigrette_1.jpg",
+        cat: "Starters",
+        price: 3
+    },
+    {
+        file: "salade.jpg",
+        cat: "Starters",
+        price: 3
+    },
+    {
+        file: "cake.jpg",
+        cat: "Desserts",
         price: 4
     },
     {
-        file: "07_bundt_ring_cake.jpg",
-        cat: "Desserts",
-        price: 12
-    },
-    {
-        file: "08_sliced_sponge_cake.jpg",
+        file: "gateau.jpeg",
         cat: "Desserts",
         price: 5
     },
     {
-        file: "09_dense_cake_slice.jpg",
+        file: "gateaux.jpeg",
         cat: "Desserts",
         price: 5
     },
@@ -91,16 +106,36 @@ const rawMenuItems = [
     },
     {
         file: "boiled_cassava_manioc.png",
-        cat: "Starters",
-        price: 6
+        cat: "Mains",
+        price: 7
     },
     {
         file: "cabage stew.jpg",
         cat: "Mains",
-        price: 14
+        price: 8
     },
     {
         file: "cameroonian-meal-platter.jpg",
+        cat: "Specials",
+        price: 45
+    },
+    {
+        file: "ndole-fish-meal.jpg",
+        cat: "Specials",
+        price: 45
+    },
+    {
+        file: "party-menu.jpg",
+        cat: "Specials",
+        price: 45
+    },
+    {
+        file: "party-platter.jpg.jpg",
+        cat: "Specials",
+        price: 45
+    },
+    {
+        file: "Party_table.jpg",
         cat: "Specials",
         price: 45
     },
@@ -112,7 +147,7 @@ const rawMenuItems = [
     {
         file: "chicken ocra.jpg",
         cat: "Mains",
-        price: 18
+        price: 10
     },
     {
         file: "colorful-meat-skewers.jpg",
@@ -121,13 +156,13 @@ const rawMenuItems = [
     },
     {
         file: "corn_fufu_couscous_mais.jpg",
-        cat: "Sides",
-        price: 5
+        cat: "Mains",
+        price: 8
     },
     {
         file: "crepes.jpg",
         cat: "Desserts",
-        price: 6
+        price: 2
     },
     {
         file: "cut_fritters.jpg",
@@ -137,22 +172,22 @@ const rawMenuItems = [
     {
         file: "eru.jpg",
         cat: "Mains",
-        price: 18
+        price: 12
     },
     {
         file: "fish_rolls_pastries.jpg",
         cat: "Starters",
-        price: 3
+        price: 4
     },
     {
         file: "fried fish.jpg",
         cat: "Mains",
-        price: 20
+        price: 9
     },
     {
         file: "fried vegetable.jpg",
         cat: "Mains",
-        price: 14
+        price: 10
     },
     {
         file: "meat-pie.jpg",
@@ -162,17 +197,17 @@ const rawMenuItems = [
     {
         file: "ndole-fish-meal.jpg",
         cat: "Mains",
-        price: 22
+        price: 12
     },
     {
         file: "ndole_bitterleaf_stew.jpg",
         cat: "Mains",
-        price: 18
+        price: 10
     },
     {
         file: "okra_soup_with_meat_fish.jpg",
         cat: "Mains",
-        price: 18
+        price: 7.5
     },
     {
         file: "piment.jpg",
@@ -182,17 +217,17 @@ const rawMenuItems = [
     {
         file: "pili-pili.jpg",
         cat: "Sides",
-        price: 2
+        price: 3
     },
     {
         file: "plantain-meat_mix.jpg",
         cat: "Starters",
-        price: 8
+        price: 12
     },
     {
         file: "poisson_frit_fried_fish.jpg",
         cat: "Mains",
-        price: 15
+        price: 8
     },
     {
         file: "puff puff.jpg",
@@ -200,9 +235,9 @@ const rawMenuItems = [
         price: 4
     },
     {
-        file: "rice-sauce-meal.jpg",
+        file: "meat-pie-raw.jpg",
         cat: "Mains",
-        price: 16
+        price: 8
     },
     {
         file: "rolled-meat-pie.jpg",
@@ -212,12 +247,12 @@ const rawMenuItems = [
     {
         file: "rosted fish.jpg",
         cat: "Mains",
-        price: 16
+        price: 12
     },
     {
         file: "rosted_fish_plantain.jpg",
         cat: "Mains",
-        price: 18
+        price: 10
     },
     {
         file: "salad.jpg",
@@ -227,7 +262,7 @@ const rawMenuItems = [
     {
         file: "sauce_arachide_peanut_soup.jpg",
         cat: "Mains",
-        price: 17
+        price: 12
     },
     {
         file: "soya_beef_skewer.jpg",
@@ -237,17 +272,22 @@ const rawMenuItems = [
     {
         file: "steamed-spaghetti.jpg",
         cat: "Mains",
-        price: 15
+        price: 8
     },
     {
         file: "stew.jpg",
         cat: "Mains",
-        price: 14
+        price: 12
     },
     {
-        file: "water_fufu_fermented_cassava.jpg",
+        file: "water_fufu.jpg",
         cat: "Sides",
         price: 4
+    },
+    {
+        file: "couscous stew.jpg",
+        cat: "Mains",
+        price: 12
     }
 ];
 const FullMenu = ()=>{
@@ -322,7 +362,7 @@ const FullMenu = ()=>{
                             children: "Maavii Menu"
                         }, void 0, false, {
                             fileName: "[project]/src/components/FullMenu.tsx",
-                            lineNumber: 129,
+                            lineNumber: 137,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -330,13 +370,13 @@ const FullMenu = ()=>{
                             children: "Explore our complete selection of savory dishes, snacks, and sweet treats."
                         }, void 0, false, {
                             fileName: "[project]/src/components/FullMenu.tsx",
-                            lineNumber: 132,
+                            lineNumber: 140,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/FullMenu.tsx",
-                    lineNumber: 128,
+                    lineNumber: 136,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -351,7 +391,7 @@ const FullMenu = ()=>{
                                     children: "All"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/FullMenu.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 150,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 categories.map((category)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -360,13 +400,13 @@ const FullMenu = ()=>{
                                         children: category
                                     }, category, false, {
                                         fileName: "[project]/src/components/FullMenu.tsx",
-                                        lineNumber: 152,
+                                        lineNumber: 160,
                                         columnNumber: 29
                                     }, ("TURBOPACK compile-time value", void 0)))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/FullMenu.tsx",
-                            lineNumber: 141,
+                            lineNumber: 149,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -380,7 +420,7 @@ const FullMenu = ()=>{
                                     className: "w-full pl-6 pr-12 py-3 rounded-full border-2 border-charcoal/10 bg-white focus:border-maaviiOrange focus:ring-0 outline-none transition-all font-serif"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/FullMenu.tsx",
-                                    lineNumber: 167,
+                                    lineNumber: 175,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -398,29 +438,29 @@ const FullMenu = ()=>{
                                             d: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/FullMenu.tsx",
-                                            lineNumber: 176,
+                                            lineNumber: 184,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/FullMenu.tsx",
-                                        lineNumber: 175,
+                                        lineNumber: 183,
                                         columnNumber: 29
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/FullMenu.tsx",
-                                    lineNumber: 174,
+                                    lineNumber: 182,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/FullMenu.tsx",
-                            lineNumber: 166,
+                            lineNumber: 174,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/FullMenu.tsx",
-                    lineNumber: 138,
+                    lineNumber: 146,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -440,14 +480,14 @@ const FullMenu = ()=>{
                                             loading: "lazy"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/FullMenu.tsx",
-                                            lineNumber: 191,
+                                            lineNumber: 199,
                                             columnNumber: 37
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/FullMenu.tsx",
-                                            lineNumber: 198,
+                                            lineNumber: 206,
                                             columnNumber: 37
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -455,7 +495,7 @@ const FullMenu = ()=>{
                                             children: item.priceStr
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/FullMenu.tsx",
-                                            lineNumber: 201,
+                                            lineNumber: 209,
                                             columnNumber: 37
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -475,12 +515,12 @@ const FullMenu = ()=>{
                                                     d: "M5 13l4 4L19 7"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/FullMenu.tsx",
-                                                    lineNumber: 217,
+                                                    lineNumber: 225,
                                                     columnNumber: 49
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/FullMenu.tsx",
-                                                lineNumber: 216,
+                                                lineNumber: 224,
                                                 columnNumber: 45
                                             }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                                                 xmlns: "http://www.w3.org/2000/svg",
@@ -495,23 +535,23 @@ const FullMenu = ()=>{
                                                     d: "M12 6v6m0 0v6m0-6h6m-6 0H6"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/FullMenu.tsx",
-                                                    lineNumber: 221,
+                                                    lineNumber: 229,
                                                     columnNumber: 49
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/FullMenu.tsx",
-                                                lineNumber: 220,
+                                                lineNumber: 228,
                                                 columnNumber: 45
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/FullMenu.tsx",
-                                            lineNumber: 206,
+                                            lineNumber: 214,
                                             columnNumber: 37
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/FullMenu.tsx",
-                                    lineNumber: 190,
+                                    lineNumber: 198,
                                     columnNumber: 33
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -522,7 +562,7 @@ const FullMenu = ()=>{
                                             children: item.category
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/FullMenu.tsx",
-                                            lineNumber: 229,
+                                            lineNumber: 237,
                                             columnNumber: 37
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -530,7 +570,7 @@ const FullMenu = ()=>{
                                             children: item.name
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/FullMenu.tsx",
-                                            lineNumber: 232,
+                                            lineNumber: 240,
                                             columnNumber: 37
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -538,7 +578,7 @@ const FullMenu = ()=>{
                                             children: item.description
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/FullMenu.tsx",
-                                            lineNumber: 235,
+                                            lineNumber: 243,
                                             columnNumber: 37
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -547,25 +587,25 @@ const FullMenu = ()=>{
                                             children: isJustAdded ? '✓ ADDED TO CART' : '+ ADD TO CART'
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/FullMenu.tsx",
-                                            lineNumber: 240,
+                                            lineNumber: 248,
                                             columnNumber: 37
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/FullMenu.tsx",
-                                    lineNumber: 228,
+                                    lineNumber: 236,
                                     columnNumber: 33
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, item.id, true, {
                             fileName: "[project]/src/components/FullMenu.tsx",
-                            lineNumber: 188,
+                            lineNumber: 196,
                             columnNumber: 29
                         }, ("TURBOPACK compile-time value", void 0));
                     })
                 }, void 0, false, {
                     fileName: "[project]/src/components/FullMenu.tsx",
-                    lineNumber: 183,
+                    lineNumber: 191,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 filteredItems.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -576,7 +616,7 @@ const FullMenu = ()=>{
                             children: "No dishes found matching your criteria."
                         }, void 0, false, {
                             fileName: "[project]/src/components/FullMenu.tsx",
-                            lineNumber: 258,
+                            lineNumber: 266,
                             columnNumber: 25
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -588,24 +628,24 @@ const FullMenu = ()=>{
                             children: "Clear Filters"
                         }, void 0, false, {
                             fileName: "[project]/src/components/FullMenu.tsx",
-                            lineNumber: 259,
+                            lineNumber: 267,
                             columnNumber: 25
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/FullMenu.tsx",
-                    lineNumber: 257,
+                    lineNumber: 265,
                     columnNumber: 21
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/FullMenu.tsx",
-            lineNumber: 125,
+            lineNumber: 133,
             columnNumber: 13
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/components/FullMenu.tsx",
-        lineNumber: 124,
+        lineNumber: 132,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
