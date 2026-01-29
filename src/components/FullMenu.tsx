@@ -68,7 +68,7 @@ const rawMenuItems = [
     { file: "steamed-spaghetti.jpg", cat: "Mains", price: 8 },
     { file: "stew.jpg", cat: "Mains", price: 12 },
     { file: "water_fufu.jpg", cat: "Sides", price: 4 },
-    { file: "couscous stew.jpg", cat: "Mains", price: 12 },  
+    { file: "couscous stew.jpg", cat: "Mains", price: 12 },
 ];
 
 const FullMenu: React.FC = () => {
@@ -209,15 +209,14 @@ const FullMenu: React.FC = () => {
                                     <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full text-charcoal font-black shadow-lg border border-charcoal/10">
                                         {item.priceStr}
                                     </div>
-                                    
+
                                     {/* Add to Cart Button on Image */}
                                     <button
                                         onClick={() => handleAddToCart(item)}
-                                        className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center shadow-lg text-white transition-all duration-300 ${
-                                            isJustAdded 
-                                                ? 'bg-maaviiTeal scale-125 rotate-12' 
+                                        className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center shadow-lg text-white transition-all duration-300 ${isJustAdded
+                                                ? 'bg-maaviiTeal scale-125 rotate-12'
                                                 : 'bg-maaviiOrange hover:scale-110 border-2 border-white'
-                                        }`}
+                                            }`}
                                         title="Add to Cart"
                                     >
                                         {isJustAdded ? (
@@ -243,15 +242,14 @@ const FullMenu: React.FC = () => {
                                     <p className="text-charcoal/60 font-serif text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
                                         {item.description}
                                     </p>
-                                    
+
                                     {/* Add to Cart Button in Content Area */}
                                     <button
                                         onClick={() => handleAddToCart(item)}
-                                        className={`mt-4 w-full py-3 rounded-full font-bold uppercase text-sm tracking-wider transition-all ${
-                                            isJustAdded 
-                                                ? 'bg-maaviiTeal text-white' 
-                                                : 'bg-charcoal text-white hover:bg-maaviiOrange'
-                                        }`}
+                                        className={`mt-4 w-full py-3 rounded-full font-bold uppercase text-sm tracking-wider transition-all ${isJustAdded
+                                                ? 'bg-maaviiTeal text-maaviiYellow'
+                                                : 'bg-charcoal text-maaviiYellow hover:bg-maaviiOrange'
+                                            }`}
                                     >
                                         {isJustAdded ? '✓ ADDED TO CART' : '+ ADD TO CART'}
                                     </button>

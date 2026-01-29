@@ -49,15 +49,15 @@ export default function Gallery() {
   // Auto-advance the slideshow every 5 seconds
   useEffect(() => {
     let interval: NodeJS.Timeout;
-    
+
     if (isSlideshowActive) {
       interval = setInterval(() => {
-        setCurrentIndex((prevIndex) => 
+        setCurrentIndex((prevIndex) =>
           prevIndex === images.length - 1 ? 0 : prevIndex + 1
         );
       }, 5000);
     }
-    
+
     return () => {
       if (interval) clearInterval(interval);
     };
@@ -92,14 +92,14 @@ export default function Gallery() {
         {/* Slideshow Section */}
         <div className="relative mb-12 max-w-4xl mx-auto">
           <div className="relative aspect-video overflow-hidden rounded-2xl shadow-xl">
-            <img 
-              src={images[currentIndex].src} 
-              alt={images[currentIndex].alt} 
+            <img
+              src={images[currentIndex].src}
+              alt={images[currentIndex].alt}
               className="w-full h-full object-cover transition-opacity duration-500"
             />
-            
+
             {/* Navigation Arrows */}
-            <button 
+            <button
               onClick={goToPrevious}
               className="absolute left-4 top-1/2 -translate-y-1/2 bg-maaviiOrange/80 hover:bg-maaviiOrange text-white p-3 rounded-full shadow-lg transition-all"
               aria-label="Previous image"
@@ -108,8 +108,8 @@ export default function Gallery() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
-            
-            <button 
+
+            <button
               onClick={goToNext}
               className="absolute right-4 top-1/2 -translate-y-1/2 bg-maaviiOrange/80 hover:bg-maaviiOrange text-white p-3 rounded-full shadow-lg transition-all"
               aria-label="Next image"
@@ -119,32 +119,30 @@ export default function Gallery() {
               </svg>
             </button>
           </div>
-          
+
           <div className="mt-6 flex flex-col items-center">
             <div className="text-center mb-4">
               <h3 className="text-xl font-bold text-charcoal">{images[currentIndex].alt}</h3>
             </div>
-            
+
             <div className="flex items-center gap-4">
-              <button 
+              <button
                 onClick={toggleSlideshow}
-                className={`px-6 py-2 rounded-full font-bold ${
-                  isSlideshowActive 
-                    ? 'bg-maaviiTeal text-white' 
-                    : 'bg-charcoal text-cream hover:bg-maaviiOrange'
-                }`}
+                className={`px-6 py-2 rounded-full font-bold ${isSlideshowActive
+                    ? 'bg-maaviiTeal text-charcoal'
+                    : 'bg-charcoal text-maaviiYellow hover:bg-maaviiOrange'
+                  }`}
               >
                 {isSlideshowActive ? 'Pause Slideshow' : 'Start Slideshow'}
               </button>
-              
+
               <div className="flex gap-2">
                 {images.map((_, idx) => (
                   <button
                     key={idx}
                     onClick={() => goToSlide(idx)}
-                    className={`w-3 h-3 rounded-full ${
-                      idx === currentIndex ? 'bg-maaviiOrange' : 'bg-gray-300'
-                    }`}
+                    className={`w-3 h-3 rounded-full ${idx === currentIndex ? 'bg-maaviiOrange' : 'bg-gray-300'
+                      }`}
                     aria-label={`Go to slide ${idx + 1}`}
                   />
                 ))}
@@ -156,20 +154,19 @@ export default function Gallery() {
         {/* Thumbnail Grid */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {images.map((image, i) => (
-            <div 
-              key={i} 
-              className={`overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer ${
-                i === currentIndex ? 'ring-4 ring-maaviiOrange scale-105' : ''
-              }`}
+            <div
+              key={i}
+              className={`overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer ${i === currentIndex ? 'ring-4 ring-maaviiOrange scale-105' : ''
+                }`}
               onClick={() => {
                 setCurrentIndex(i);
                 setIsSlideshowActive(false); // Stop slideshow when clicking a thumbnail
               }}
             >
-              <img 
-                src={image.src} 
-                alt={image.alt} 
-                className="w-full h-40 object-cover hover:scale-110 transition-transform duration-300" 
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-40 object-cover hover:scale-110 transition-transform duration-300"
               />
               <div className="p-2 bg-white">
                 <p className="text-xs text-charcoal truncate">{image.alt}</p>

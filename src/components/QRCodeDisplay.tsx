@@ -11,10 +11,10 @@ interface QRCodeDisplayProps {
   bgColor?: string;
 }
 
-const QRCodeDisplay: React.FC<QRCodeDisplayProps> = ({ 
-  title, 
-  subtitle, 
-  qrCodeUrl, 
+const QRCodeDisplay: React.FC<QRCodeDisplayProps> = ({
+  title,
+  subtitle,
+  qrCodeUrl,
   link,
   icon,
   bgColor = 'bg-cream'
@@ -28,21 +28,21 @@ const QRCodeDisplay: React.FC<QRCodeDisplayProps> = ({
           {subtitle && <p className="text-sm text-charcoal/60">{subtitle}</p>}
         </div>
       </div>
-      
+
       <div className="bg-white p-4 rounded-xl border-2 border-charcoal/10 flex flex-col items-center">
-        <img 
-          src={qrCodeUrl} 
+        <img
+          src={qrCodeUrl}
           alt={`${title} QR Code`}
           className="w-48 h-48 object-contain"
         />
         <p className="text-xs text-charcoal/60 mt-2 text-center font-bold">Scan to connect</p>
       </div>
-      
+
       <a
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="block w-full text-center py-3 bg-charcoal text-cream rounded-xl font-bold hover:bg-maaviiOrange transition-colors"
+        className="block w-full text-center py-3 bg-charcoal text-maaviiYellow rounded-xl font-bold hover:bg-maaviiOrange transition-colors"
       >
         Open Link
       </a>

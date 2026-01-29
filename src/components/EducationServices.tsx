@@ -126,7 +126,7 @@ const EducationServices: React.FC = () => {
                     </h2>
 
                     <p className="text-2xl text-charcoal/80 font-serif italic max-w-3xl mx-auto glass-vibrant p-8 rounded-3xl border-2 border-maaviiTeal shadow-xl">
-                        {t('educationSubtitle') || "Master the art of African and Fusion cuisine through our professional workshops and training programs."}
+                        Where heritage meets the heat. Stir your curiosity, master the craft, and ignite the soulful legacy of Afro-Korean fusion.
                     </p>
                 </div>
 

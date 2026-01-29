@@ -90,7 +90,7 @@ const ComingSoon: React.FC = () => {
                         <div className="relative group">
                             <div className="h-full p-10 bg-white rounded-[3rem] border-4 border-maaviiOrange/20 shadow-xl group-hover:shadow-2xl group-hover:-translate-y-2 transition-all relative overflow-hidden">
                                 <div className="absolute top-0 right-0 w-32 h-32 african-pattern opacity-5 -translate-y-12 translate-x-12"></div>
-                                <div className="w-20 h-20 bg-maaviiOrange text-cream rounded-[1.5rem] flex items-center justify-center text-4xl font-black mb-8 shadow-lg rotate-2">
+                                <div className="w-20 h-20 bg-[#000033] text-white rounded-[1.5rem] flex items-center justify-center text-4xl font-black mb-8 shadow-lg rotate-2 border-2 border-[#00d4ff]">
                                     1
                                 </div>
                                 <h3 className="text-3xl font-black mb-6 text-charcoal">Food Truck Launch</h3>
@@ -115,7 +115,7 @@ const ComingSoon: React.FC = () => {
                         <div className="relative group">
                             <div className="h-full p-10 bg-white rounded-[3rem] border-4 border-maaviiTeal/20 shadow-xl group-hover:shadow-2xl group-hover:-translate-y-2 transition-all relative overflow-hidden">
                                 <div className="absolute top-0 right-0 w-32 h-32 african-pattern opacity-5 -translate-y-12 translate-x-12"></div>
-                                <div className="w-20 h-20 bg-maaviiTeal text-cream rounded-[1.5rem] flex items-center justify-center text-4xl font-black mb-8 shadow-lg -rotate-2">
+                                <div className="w-20 h-20 bg-[#000033] text-white rounded-[1.5rem] flex items-center justify-center text-4xl font-black mb-8 shadow-lg -rotate-2 border-2 border-[#00d4ff]">
                                     2
                                 </div>
                                 <h3 className="text-3xl font-black mb-6 text-charcoal">Cultural Hub</h3>
@@ -140,7 +140,7 @@ const ComingSoon: React.FC = () => {
                         <div className="relative group">
                             <div className="h-full p-10 bg-white rounded-[3rem] border-4 border-maaviiGold/20 shadow-xl group-hover:shadow-2xl group-hover:-translate-y-2 transition-all relative overflow-hidden">
                                 <div className="absolute top-0 right-0 w-32 h-32 african-pattern opacity-5 -translate-y-12 translate-x-12"></div>
-                                <div className="w-20 h-20 bg-maaviiGold text-charcoal rounded-[1.5rem] flex items-center justify-center text-4xl font-black mb-8 shadow-lg rotate-3">
+                                <div className="w-20 h-20 bg-[#000033] text-white rounded-[1.5rem] flex items-center justify-center text-4xl font-black mb-8 shadow-lg rotate-3 border-2 border-[#00d4ff]">
                                     3
                                 </div>
                                 <h3 className="text-3xl font-black mb-6 text-charcoal">Franchise Chain</h3>
@@ -165,38 +165,39 @@ const ComingSoon: React.FC = () => {
             </section>
 
             {/* Partnership Opportunities */}
-            <section className="py-32 bg-charcoal relative overflow-hidden">
-                <div className="absolute inset-0 mask-overlay opacity-5 pointer-events-none"></div>
-                <div className="absolute -top-24 -left-24 w-96 h-96 bg-maaviiOrange/20 rounded-full blur-[120px]"></div>
-                <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-maaviiTeal/20 rounded-full blur-[120px]"></div>
+            <section className="py-32 bg-maaviiYellow relative overflow-hidden">
+                <div className="absolute inset-0 african-pattern opacity-15 pointer-events-none"></div>
+                <div className="absolute -top-24 -left-24 w-96 h-96 bg-maaviiOrange/10 rounded-full blur-[120px]"></div>
+                <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-maaviiTeal/10 rounded-full blur-[120px]"></div>
 
                 <Container>
                     <div className="text-center mb-20 relative z-10">
-                        <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-cream rounded-full font-black text-sm uppercase tracking-widest mb-8 border border-white/20">
-                            <Users size={20} className="text-maaviiTeal" />
+                        <div className="inline-flex items-center gap-2 px-6 py-3 bg-white text-charcoal rounded-full font-black text-sm uppercase tracking-widest mb-8 border-2 border-maaviiOrange shadow-xl">
+                            <Users size={20} className="text-maaviiOrange" />
                             Partnership Opportunities
                         </div>
-                        <h2 className="text-5xl md:text-8xl font-black text-white mb-6 uppercase tracking-tighter">
-                            Join the <span className="text-maaviiOrange">Movement</span>
+                        <h2 className="text-5xl md:text-8xl font-black text-charcoal mb-6 uppercase tracking-tighter drop-shadow-sm">
+                            Join the <span className="text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">Movement</span>
                         </h2>
-                        <p className="text-2xl text-white/60 max-w-4xl mx-auto font-serif italic leading-relaxed">
+                        <p className="text-2xl text-charcoal/80 max-w-4xl mx-auto font-serif italic leading-relaxed bg-white/40 backdrop-blur-sm p-4 rounded-2xl">
                             We&apos;re seeking visionary partners who believe in cultural entrepreneurship and community impact
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto relative z-10">
                         {[
-                            { icon: Store, color: 'text-maaviiOrange', bg: 'bg-maaviiOrange/10', title: 'Investors', text: 'Early-stage investment in scalable food & cultural venture' },
-                            { icon: TrendingUp, color: 'text-maaviiTeal', bg: 'bg-maaviiTeal/10', title: 'Franchisees', text: 'Run your own food truck in the African Union chain' },
-                            { icon: Globe, color: 'text-maaviiGold', bg: 'bg-maaviiGold/10', title: 'Sponsors', text: 'Cultural events, training programs & community initiatives' },
-                            { icon: Heart, color: 'text-maaviiRed', bg: 'bg-maaviiRed/10', title: 'Community', text: 'Membership programs for supporters & stakeholders' }
+                            { icon: Store, bg: 'bg-maaviiOrange/20', title: 'Investors', text: 'Early-stage investment in scalable food & cultural venture' },
+                            { icon: TrendingUp, bg: 'bg-maaviiTeal/20', title: 'Franchisees', text: 'Run your own food truck in the African Union chain' },
+                            { icon: Globe, bg: 'bg-maaviiGold/20', title: 'Sponsors', text: 'Cultural events, training programs & community initiatives' },
+                            { icon: Heart, bg: 'bg-maaviiRed/20', title: 'Community', text: 'Membership programs for supporters & stakeholders' }
                         ].map((item, idx) => (
-                            <div key={idx} className="p-10 bg-white/5 backdrop-blur-sm rounded-[2.5rem] border-2 border-white/10 shadow-2xl hover:bg-white/10 transition-all hover:-translate-y-2 group">
-                                <div className={`w-20 h-20 ${item.bg} rounded-2xl flex items-center justify-center mb-8 border-2 border-white/10 group-hover:scale-110 transition-transform`}>
-                                    <item.icon className={`w-10 h-10 ${item.color}`} />
+                            <div key={idx} className={`p-10 ${item.bg} rounded-[2.5rem] border-4 border-maaviiGold shadow-2xl hover:scale-105 transition-all hover:-translate-y-2 group relative overflow-hidden backdrop-blur-md`}>
+                                <div className="absolute top-0 right-0 w-24 h-24 african-pattern opacity-10 -translate-y-8 translate-x-8"></div>
+                                <div className="w-20 h-20 bg-maaviiChocolate/10 rounded-2xl flex items-center justify-center mb-8 border-2 border-maaviiChocolate/20 group-hover:scale-110 transition-transform">
+                                    <item.icon className="w-10 h-10 text-maaviiChocolate" />
                                 </div>
-                                <h3 className="font-black text-2xl mb-4 text-white uppercase tracking-tight">{item.title}</h3>
-                                <p className="text-lg text-white/50 leading-relaxed font-serif italic">{item.text}</p>
+                                <h3 className="font-black text-2xl mb-4 text-maaviiChocolate uppercase tracking-tight">{item.title}</h3>
+                                <p className="text-lg text-[#064e3b] font-serif italic font-bold leading-relaxed">{item.text}</p>
                             </div>
                         ))}
                     </div>
@@ -231,16 +232,17 @@ const ComingSoon: React.FC = () => {
             </section>
 
             {/* Call to Action */}
-            <section className="py-32 bg-gradient-to-br from-maaviiOrange via-deepRed to-maaviiChocolate text-cream relative overflow-hidden">
-                <div className="absolute inset-0 mask-overlay opacity-20 pointer-events-none"></div>
-                <div className="absolute top-0 right-0 w-1/2 h-full african-pattern opacity-10 pointer-events-none -skew-x-12 translate-x-1/4"></div>
+            <section className="py-32 bg-white relative overflow-hidden border-t-8 border-maaviiOrange">
+                <div className="absolute inset-0 african-pattern opacity-30 pointer-events-none" style={{ backgroundSize: '120px 120px' }}></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-maaviiOrange/20 via-maaviiTeal/20 to-maaviiGold/20"></div>
+                <div className="absolute top-0 right-0 w-1/2 h-full african-pattern opacity-20 pointer-events-none -skew-x-12 translate-x-1/4" style={{ filter: 'hue-rotate(45deg)' }}></div>
 
                 <Container>
                     <div className="max-w-5xl mx-auto text-center relative z-10">
-                        <h2 className="text-6xl md:text-9xl font-black mb-8 uppercase tracking-tighter leading-none drop-shadow-2xl animate-pulse-slow">
-                            Ready to Make <br /> <span className="text-maaviiYellow">History?</span>
+                        <h2 className="text-6xl md:text-9xl font-black mb-8 uppercase tracking-tighter leading-none drop-shadow-2xl animate-pulse-slow text-[#064e3b]">
+                            Ready to Make <br /> <span className="text-maaviiYellow drop-shadow-[0_4px_4px_rgba(0,0,0,0.4)]">History?</span>
                         </h2>
-                        <p className="text-3xl md:text-4xl mb-12 font-serif italic text-white/90 leading-tight">
+                        <p className="text-3xl md:text-4xl mb-12 font-serif italic text-[#064e3b] font-black leading-tight">
                             Join us in building the first African Cultural & Entrepreneurial Hub in Busan
                         </p>
                         <div className="flex flex-wrap gap-8 justify-center items-center scale-110">

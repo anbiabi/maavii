@@ -94,7 +94,7 @@ const OrderingSection: React.FC = () => {
                             <div className="space-y-4 max-h-96 overflow-y-auto pr-2">
                                 {featuredItems.map((item) => {
                                     const isJustAdded = addedIds.has(item.id);
-                                    
+
                                     return (
                                         <div key={item.id} className="p-4 bg-cream rounded-xl border-2 border-charcoal/5 hover:border-maaviiOrange transition-colors group">
                                             <div className="flex justify-between items-start mb-2">
@@ -106,11 +106,10 @@ const OrderingSection: React.FC = () => {
                                             </p>
                                             <button
                                                 onClick={() => handleAddToCart(item)}
-                                                className={`w-full py-2 rounded-lg font-bold text-xs uppercase tracking-widest transition-colors flex items-center justify-center gap-2 ${
-                                                    isJustAdded 
-                                                        ? 'bg-maaviiTeal text-cream' 
-                                                        : 'bg-charcoal text-cream hover:bg-maaviiOrange'
-                                                }`}
+                                                className={`w-full py-2 rounded-lg font-bold text-xs uppercase tracking-widest transition-colors flex items-center justify-center gap-2 ${isJustAdded
+                                                        ? 'bg-maaviiTeal text-maaviiYellow'
+                                                        : 'bg-charcoal text-maaviiYellow hover:bg-maaviiOrange'
+                                                    }`}
                                             >
                                                 {isJustAdded ? (
                                                     <>

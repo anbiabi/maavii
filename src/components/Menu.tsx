@@ -19,7 +19,7 @@ const Menu: React.FC = () => {
   const filteredItems = useMemo(() => {
     return MENU_ITEMS.filter(item => {
       const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
-      const matchesSearch = 
+      const matchesSearch =
         item.name[language].toLowerCase().includes(searchTerm.toLowerCase()) ||
         item.description[language].toLowerCase().includes(searchTerm.toLowerCase());
       return matchesCategory && matchesSearch;
@@ -50,7 +50,7 @@ const Menu: React.FC = () => {
             <div className="absolute inset-y-0 left-6 flex items-center pointer-events-none">
               <Search className="w-6 h-6 text-charcoal/40 group-focus-within:text-maaviiTeal transition-colors" />
             </div>
-            <input 
+            <input
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -58,7 +58,7 @@ const Menu: React.FC = () => {
               className="w-full pl-16 pr-12 py-5 bg-cream rounded-2xl font-bold text-lg border-4 border-charcoal/5 focus:border-maaviiTeal outline-none transition-all shadow-xl placeholder:text-charcoal/30"
             />
             {searchTerm && (
-              <button 
+              <button
                 onClick={() => setSearchTerm('')}
                 className="absolute inset-y-0 right-6 flex items-center text-charcoal/40 hover:text-deepRed"
               >
@@ -66,35 +66,32 @@ const Menu: React.FC = () => {
               </button>
             )}
           </div>
-          
+
           <div className="flex flex-wrap justify-center gap-4">
-            <button 
+            <button
               onClick={() => setActiveCategory('all')}
-              className={`px-8 py-4 rounded-2xl font-black text-lg transition-all shadow-lg border-b-4 ${
-                activeCategory === 'all' 
-                ? 'bg-charcoal text-cream border-black -translate-y-1' 
-                : 'bg-cream text-charcoal border-charcoal/10 hover:border-charcoal'
-              }`}
+              className={`px-8 py-4 rounded-2xl font-black text-lg transition-all shadow-lg border-b-4 ${activeCategory === 'all'
+                  ? 'bg-charcoal text-maaviiYellow border-black -translate-y-1'
+                  : 'bg-cream text-charcoal border-charcoal/10 hover:border-charcoal'
+                }`}
             >
               {t('all')}
             </button>
-            <button 
+            <button
               onClick={() => setActiveCategory('main')}
-              className={`px-8 py-4 rounded-2xl font-black text-lg transition-all shadow-lg border-b-4 ${
-                activeCategory === 'main' 
-                ? 'bg-maaviiTeal text-cream border-teal-900 -translate-y-1' 
-                : 'bg-cream text-charcoal border-charcoal/10 hover:border-maaviiTeal'
-              }`}
+              className={`px-8 py-4 rounded-2xl font-black text-lg transition-all shadow-lg border-b-4 ${activeCategory === 'main'
+                  ? 'bg-maaviiTeal text-maaviiYellow border-teal-900 -translate-y-1'
+                  : 'bg-cream text-charcoal border-charcoal/10 hover:border-maaviiTeal'
+                }`}
             >
               {t('mainDishes')}
             </button>
-            <button 
+            <button
               onClick={() => setActiveCategory('snack')}
-              className={`px-8 py-4 rounded-2xl font-black text-lg transition-all shadow-lg border-b-4 ${
-                activeCategory === 'snack' 
-                ? 'bg-maaviiOrange text-cream border-orange-900 -translate-y-1' 
-                : 'bg-cream text-charcoal border-charcoal/10 hover:border-maaviiOrange'
-              }`}
+              className={`px-8 py-4 rounded-2xl font-black text-lg transition-all shadow-lg border-b-4 ${activeCategory === 'snack'
+                  ? 'bg-maaviiOrange text-maaviiYellow border-orange-900 -translate-y-1'
+                  : 'bg-cream text-charcoal border-charcoal/10 hover:border-maaviiOrange'
+                }`}
             >
               {t('snacksDesserts')}
             </button>
@@ -108,9 +105,9 @@ const Menu: React.FC = () => {
               <p className="text-2xl font-black text-charcoal/40 font-serif italic">
                 {t('noResults')}
               </p>
-              <button 
+              <button
                 onClick={() => { setSearchTerm(''); setActiveCategory('all'); }}
-                className="px-8 py-3 bg-charcoal text-cream rounded-xl font-bold hover:bg-maaviiOrange transition-colors"
+                className="px-8 py-3 bg-charcoal text-maaviiYellow rounded-xl font-bold hover:bg-maaviiOrange transition-colors"
               >
                 Clear Filters
               </button>
@@ -120,13 +117,13 @@ const Menu: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {filteredItems.map(item => {
               const isJustAdded = addedIds.has(item.id);
-              
+
               return (
                 <div key={item.id} className="group relative bg-cream rounded-[2.5rem] overflow-hidden border-4 border-charcoal/5 hover:border-maaviiOrange hover:shadow-2xl transition-all flex flex-col">
                   <div className="relative h-72 overflow-hidden">
-                    <img 
-                      src={item.image} 
-                      alt={item.name[language]} 
+                    <img
+                      src={item.image}
+                      alt={item.name[language]}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                     <div className="absolute bottom-4 left-4 bg-maaviiYellow px-4 py-2 rounded-xl font-black text-charcoal shadow-lg border-2 border-amber-900/10">
@@ -138,9 +135,9 @@ const Menu: React.FC = () => {
                       </div>
                     )}
                   </div>
-                  
+
                   <div className="p-8 flex-1 flex flex-col justify-between relative">
-                    <button 
+                    <button
                       onClick={() => handleAddToCart(item)}
                       className={`absolute -top-6 right-8 w-12 h-12 rounded-full flex items-center justify-center shadow-lg text-white transition-all duration-300 transform {isJustAdded ? 'bg-maaviiTeal scale-125 rotate-12' : 'bg-maaviiOrange hover:scale-110'
                         }`}
@@ -156,17 +153,17 @@ const Menu: React.FC = () => {
                         </svg>
                       )}
                     </button>
-                    
+
                     <div>
                       <h3 className="text-3xl font-black text-charcoal mb-3 leading-tight uppercase tracking-tight">{item.name[language]}</h3>
                       <p className="text-charcoal/60 font-serif text-lg leading-relaxed mb-8">
                         {item.description[language]}
                       </p>
                     </div>
-                    
-                    <button 
+
+                    <button
                       onClick={() => handleAddToCart(item)}
-                      className="w-full inline-flex items-center justify-center gap-3 bg-charcoal text-cream py-5 rounded-2xl font-black text-lg hover:bg-maaviiOrange transition-all group/btn shadow-xl active:scale-95 opacity-0 absolute top-0 left-0"
+                      className="w-full inline-flex items-center justify-center gap-3 bg-charcoal text-maaviiYellow py-5 rounded-2xl font-black text-lg hover:bg-maaviiOrange transition-all group/btn shadow-xl active:scale-95 opacity-0 absolute top-0 left-0"
                     >
                       <Plus className="w-6 h-6 group-hover/btn:rotate-90 transition-transform" />
                       {t('addToCart')}

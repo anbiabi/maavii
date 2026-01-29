@@ -50,7 +50,7 @@ const FullGroceryMarketplace: React.FC = () => {
             category: 'Spices & Seasonings',
             price: 7000,
             origin: 'Africa',
-            image: '/images/piment.jpg',
+            image: '/images/grocery/piment.jpeg',
             description: 'African pepper sauce for spicy flavoring in traditional dishes.'
         },
         {
@@ -131,7 +131,7 @@ const FullGroceryMarketplace: React.FC = () => {
             category: 'Grains & Legumes',
             price: 6500,
             origin: 'Africa',
-            image: '/images/grocery/Miondo.jpg',
+            image: '/images/grocery/miondo_peeled.png',
             description: 'Cassava-derived product similar to baton de manioc but smaller.'
         },
         {
@@ -428,9 +428,9 @@ const FullGroceryMarketplace: React.FC = () => {
             name: { EN: item.name, KR: item.name }, // Simple mapping for now
             description: { EN: item.description, KR: item.description },
             price: item.price / 1000, // Convert KRW to a more reasonable price
-            category: item.category.toLowerCase().includes('spice') ? 'main' : 
-                      item.category.toLowerCase().includes('oil') ? 'main' :
-                      item.category.toLowerCase().includes('fresh') ? 'main' : 'snack' as any,
+            category: item.category.toLowerCase().includes('spice') ? 'main' :
+                item.category.toLowerCase().includes('oil') ? 'main' :
+                    item.category.toLowerCase().includes('fresh') ? 'main' : 'snack' as any,
             image: item.image
         };
 
@@ -475,7 +475,7 @@ const FullGroceryMarketplace: React.FC = () => {
                                 className="w-full pl-12 pr-6 py-4 bg-white rounded-xl border-3 border-charcoal/5 focus:border-maaviiTeal outline-none font-bold text-lg"
                             />
                         </div>
-                        <button className="flex items-center gap-2 px-6 py-4 bg-charcoal text-cream rounded-xl font-bold hover:bg-maaviiOrange transition-colors">
+                        <button className="flex items-center gap-2 px-6 py-4 bg-charcoal text-maaviiYellow rounded-xl font-bold hover:bg-maaviiOrange transition-colors">
                             <Filter className="w-5 h-5" />
                             Advanced Filters
                         </button>
@@ -487,8 +487,8 @@ const FullGroceryMarketplace: React.FC = () => {
                                 key={cat}
                                 onClick={() => setSelectedCategory(cat)}
                                 className={`px-6 py-3 rounded-lg font-bold transition-all ${selectedCategory === cat
-                                        ? 'bg-maaviiTeal text-cream'
-                                        : 'bg-cream border-2 border-charcoal/10 text-charcoal hover:border-maaviiTeal'
+                                    ? 'bg-maaviiTeal text-cream'
+                                    : 'bg-cream border-2 border-charcoal/10 text-charcoal hover:border-maaviiTeal'
                                     }`}
                             >
                                 {cat}
@@ -500,7 +500,7 @@ const FullGroceryMarketplace: React.FC = () => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                     {filteredItems.map(item => {
                         const isJustAdded = addedId === `grocery-${item.id}`;
-                        
+
                         return (
                             <div key={item.id} className="bg-white rounded-2xl overflow-hidden border-3 border-charcoal/5 hover:border-maaviiOrange hover:shadow-xl transition-all group">
                                 <div className="h-64 overflow-hidden relative">
@@ -512,11 +512,10 @@ const FullGroceryMarketplace: React.FC = () => {
                                     {/* Add to Cart Button on Image */}
                                     <button
                                         onClick={() => handleAddToCart(item)}
-                                        className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center shadow-lg text-white transition-all duration-300 ${
-                                            isJustAdded 
-                                                ? 'bg-maaviiTeal scale-125 rotate-12' 
-                                                : 'bg-maaviiOrange hover:scale-110 border-2 border-white'
-                                        }`}
+                                        className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center shadow-lg text-white transition-all duration-300 ${isJustAdded
+                                            ? 'bg-maaviiTeal scale-125 rotate-12'
+                                            : 'bg-maaviiOrange hover:scale-110 border-2 border-white'
+                                            }`}
                                         title="Add to Cart"
                                     >
                                         {isJustAdded ? (
@@ -538,19 +537,17 @@ const FullGroceryMarketplace: React.FC = () => {
                                     <p className="text-charcoal/60 font-serif text-sm mb-6">{item.description}</p>
                                     <div className="flex items-center justify-between">
                                         <span className="text-2xl font-black text-maaviiOrange">₩{item.price.toLocaleString()}</span>
-                                        <button 
+                                        <button
                                             onClick={() => handleAddToCart(item)}
-                                            className={`p-3 rounded-lg transition-colors ${
-                                                isJustAdded 
-                                                    ? 'bg-maaviiTeal' 
-                                                    : 'bg-maaviiYellow hover:bg-maaviiGold'
-                                            }`}
+                                            className={`p-3 rounded-lg transition-colors ${isJustAdded
+                                                ? 'bg-maaviiTeal'
+                                                : 'bg-maaviiYellow hover:bg-maaviiGold'
+                                                }`}
                                         >
-                                            <ShoppingBag className={`w-5 h-5 ${
-                                                isJustAdded 
-                                                    ? 'text-white' 
-                                                    : 'text-charcoal'
-                                            }`} />
+                                            <ShoppingBag className={`w-5 h-5 ${isJustAdded
+                                                ? 'text-white'
+                                                : 'text-charcoal'
+                                                }`} />
                                         </button>
                                     </div>
                                 </div>

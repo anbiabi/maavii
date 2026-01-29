@@ -26,8 +26,8 @@ const Footer: React.FC = () => {
 
           <div className="flex flex-col items-center md:items-end gap-4">
             <div className="flex gap-10 text-sm font-black uppercase tracking-[0.3em]">
-              <a href="#" className="text-cream hover:text-maaviiOrange transition-all hover:scale-110">Privacy</a>
-              <a href="#" className="text-cream hover:text-maaviiOrange transition-all hover:scale-110">Terms</a>
+              <a href="#" className="text-maaviiYellow hover:text-maaviiOrange transition-all hover:scale-110">Privacy</a>
+              <a href="#" className="text-maaviiYellow hover:text-maaviiOrange transition-all hover:scale-110">Terms</a>
             </div>
             <div className="text-[10px] font-black text-maaviiTeal uppercase tracking-widest bg-white/5 px-4 py-1 rounded-full">
               Made in Yangsan with Love
