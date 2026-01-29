@@ -14,39 +14,49 @@ const MenuPreview: React.FC = () => {
     ];
 
     return (
-        <section id="menu" className="py-24 bg-maaviiYellow/10">
-            <Container>
-                <div className="text-center mb-16">
-                    <h2 className="text-5xl md:text-7xl font-black text-charcoal uppercase tracking-tighter mb-4">
-                        Our Menu
+        <section id="menu" className="py-32 bg-maaviiYellow/10 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-full african-pattern opacity-10 -skew-x-12 translate-x-1/2 pointer-events-none"></div>
+            <div className="absolute top-0 left-0 w-full h-4 african-pattern opacity-20"></div>
+
+            <Container className="relative z-10">
+                <div className="text-center mb-20 relative">
+                    <div className="w-20 h-2 vibrant-gradient mx-auto mb-6 rounded-full"></div>
+                    <h2 className="text-6xl md:text-8xl font-black text-charcoal uppercase tracking-tighter mb-6 leading-none">
+                        Our <span className="text-maaviiOrange">Menu</span>
                     </h2>
-                    <p className="text-xl text-charcoal/60 font-serif italic max-w-2xl mx-auto">
-                        A taste of our signature dishes, from sizzling skewers to authentic traditional plates.
+                    <p className="text-2xl text-charcoal/70 font-serif italic max-w-2xl mx-auto glass-vibrant p-6 rounded-2xl border-2 border-maaviiYellow/50">
+                        A taste of our signature dishes, from <span className="text-maaviiOrange font-bold underline decoration-maaviiYellow underline-offset-4">sizzling skewers</span> to authentic traditional plates.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-20">
                     {menuImages.map((item, index) => (
-                        <div key={index} className="aspect-square relative rounded-[2rem] overflow-hidden border-4 border-charcoal/5 group shadow-lg">
+                        <div key={index} className="aspect-square relative rounded-[3rem] overflow-hidden border-[10px] border-white group shadow-2xl transition-transform hover:-rotate-2 duration-500">
                             <img
                                 src={item.src}
                                 alt={item.alt}
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-maaviiChocolate/80 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity"></div>
+                            <div className="absolute bottom-6 left-6 right-6">
+                                <p className="text-cream text-2xl font-black uppercase tracking-tight opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-500">
+                                    {item.alt}
+                                </p>
+                            </div>
                         </div>
                     ))}
                 </div>
 
-                <div className="text-center">
+                <div className="text-center mt-12">
                     <Link
                         href="/menu"
-                        className="inline-flex items-center gap-3 px-10 py-5 bg-charcoal text-cream rounded-2xl font-black text-xl hover:bg-maaviiOrange hover:-translate-y-1 transition-all shadow-xl"
+                        className="inline-flex items-center gap-4 px-12 py-6 bg-charcoal text-maaviiYellow rounded-[2rem] font-black text-2xl hover:bg-maaviiOrange hover:text-white transition-all shadow-2xl hover:scale-105 border-b-6 border-maaviiChocolate"
                     >
-                        View Full Menu <ArrowRight className="w-6 h-6" />
+                        View Full Menu <ArrowRight className="w-8 h-8" />
                     </Link>
                 </div>
             </Container>
+            <div className="absolute bottom-0 left-0 w-full h-4 african-pattern opacity-20"></div>
         </section>
     );
 };

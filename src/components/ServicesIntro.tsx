@@ -32,56 +32,69 @@ const ServicesIntro: React.FC = () => {
     ];
 
     return (
-        <section id="services" className="py-24 bg-cream">
-            <Container>
-                <SectionTitle
-                    title="Our Services"
-                    subtitle="More than just a meal"
-                />
+        <section id="services" className="py-32 bg-maaviiTeal/10 relative overflow-hidden">
+            {/* Background Decorations */}
+            <div className="absolute inset-0 mask-overlay opacity-30 pointer-events-none"></div>
+            <div className="absolute top-0 left-0 w-full h-4 african-pattern opacity-30"></div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Container className="relative z-10">
+                <div className="text-center mb-20 relative">
+                    <div className="w-24 h-2 bg-maaviiOrange mx-auto mb-6 rounded-full"></div>
+                    <h2 className="text-6xl md:text-8xl font-black text-charcoal uppercase tracking-tighter mb-6 leading-none">
+                        Our <span className="text-maaviiTeal">Services</span>
+                    </h2>
+                    <p className="text-2xl text-charcoal/70 font-serif italic max-w-2xl mx-auto glass-vibrant p-6 rounded-2xl border-2 border-maaviiTeal/40 shadow-xl">
+                        Experience more than just a meal. We bring <span className="text-maaviiOrange font-bold">culture, education, and community</span> to your table.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     {services.map((service, index) => {
                         const Icon = service.icon;
-                        
+
                         return (
-                            <div 
-                                key={`service-${index}`} 
-                                className="group relative bg-white rounded-[2.5rem] p-8 border-4 border-charcoal/5 hover:border-charcoal hover:shadow-2xl transition-all duration-300"
+                            <div
+                                key={`service-${index}`}
+                                className="group relative bg-white rounded-[3.5rem] p-10 border-[8px] border-white shadow-2xl hover:border-maaviiOrange transition-all duration-500 hover:-translate-y-4"
                             >
-                                <div 
-                                    className={`w-16 h-16 rounded-2xl ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}
+                                <div className="absolute top-0 right-0 w-32 h-32 african-pattern opacity-5 rounded-bl-[4rem] group-hover:opacity-20 transition-opacity"></div>
+
+                                <div
+                                    className={`w-24 h-24 rounded-3xl ${service.color} flex items-center justify-center mb-8 shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all border-b-6 border-black/20`}
                                 >
-                                    <Icon className="w-8 h-8 text-charcoal" />
+                                    <Icon className="w-12 h-12 text-charcoal" />
                                 </div>
 
-                                <h3 className="text-2xl font-black text-charcoal mb-4 uppercase">
+                                <h3 className="text-3xl font-black text-charcoal mb-6 uppercase tracking-tight">
                                     {service.title}
                                 </h3>
-                                
-                                <p className="text-charcoal/60 font-serif mb-8 text-lg">
+
+                                <p className="text-charcoal/70 font-serif mb-10 text-xl leading-relaxed italic border-l-4 border-maaviiOrange/30 pl-4">
                                     {service.description}
                                 </p>
 
-                                <Link 
-                                    href={service.link} 
-                                    className="inline-flex items-center gap-2 font-black text-charcoal uppercase tracking-widest hover:text-maaviiOrange transition-colors"
+                                <Link
+                                    href={service.link}
+                                    className="inline-flex items-center gap-4 font-black text-xl text-charcoal uppercase tracking-widest hover:text-maaviiOrange transition-colors group/btn"
                                 >
-                                    Learn More <ArrowRight className="w-4 h-4" />
+                                    Learn More <ArrowRight className="w-6 h-6 group-hover/btn:translate-x-3 transition-transform" />
                                 </Link>
                             </div>
                         );
                     })}
                 </div>
+
+                <div className="text-center mt-20">
+                    <Link
+                        href="/services"
+                        className="inline-block px-14 py-7 vibrant-gradient text-white rounded-[2.5rem] font-black text-2xl hover:scale-110 transition-all shadow-2xl border-b-8 border-maaviiChocolate uppercase tracking-widest"
+                    >
+                        View All Services
+                    </Link>
+                </div>
             </Container>
-            
-            <div className="text-center mt-12">
-                <Link 
-                    href="/services" 
-                    className="inline-block px-8 py-4 bg-maaviiTeal text-cream rounded-xl font-black text-xl hover:bg-teal-700 transition-colors"
-                >
-                    View All Services
-                </Link>
-            </div>
+
+            <div className="absolute bottom-0 left-0 w-full h-4 african-pattern opacity-30"></div>
         </section>
     );
 };

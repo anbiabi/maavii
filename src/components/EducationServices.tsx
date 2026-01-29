@@ -2,10 +2,12 @@
 
 import React, { useState } from 'react';
 import { Users, ChefHat, Award, Calendar, Clock } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 import Container from './ui/Container';
 import SectionTitle from './ui/SectionTitle';
 
 const EducationServices: React.FC = () => {
+    const { t } = useLanguage();
     const [activeTab, setActiveTab] = useState<'workshops' | 'training' | 'catering' | 'events'>('workshops');
 
     const workshops = [
@@ -106,47 +108,46 @@ const EducationServices: React.FC = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-cream pt-32 pb-24">
-            <div className="max-w-7xl mx-auto px-4 mb-8 text-right">
-                <a
-                    href="/education"
-                    className="inline-block px-6 py-3 bg-maaviiOrange text-cream rounded-xl font-bold hover:bg-orange-700 transition-colors"
-                >
-                    View Full Education Services Page
-                </a>
-            </div>
-            <Container>
-                <SectionTitle
-                    title="Education & Professional Services"
-                    subtitle="Learn, grow, and master African cuisine"
-                />
-                <div className="text-center mb-8">
-                    <a
-                        href="/education"
-                        className="inline-block px-8 py-4 bg-maaviiTeal text-cream rounded-xl font-black text-xl hover:bg-teal-700 transition-colors"
-                    >
-                        Explore Full Education Programs
-                    </a>
+        <div className="min-h-screen bg-white relative overflow-hidden pt-32 pb-32">
+            {/* Background Decorations */}
+            <div className="absolute inset-0 mask-overlay opacity-30 pointer-events-none"></div>
+            <div className="absolute top-0 left-0 w-1/2 h-full african-pattern opacity-10 -skew-y-12 translate-x-1/2 pointer-events-none"></div>
+
+            <Container className="relative z-10">
+                <div className="text-center mb-20 relative">
+                    <div className="inline-flex items-center gap-4 px-10 py-5 bg-maaviiTeal text-charcoal rounded-3xl font-black text-3xl shadow-2xl border-b-8 border-maaviiChocolate mb-10 -rotate-1">
+                        <ChefHat size={40} className="animate-bounce" />
+                        Academy
+                    </div>
+
+                    <h2 className="text-6xl md:text-8xl font-black text-charcoal leading-none tracking-tighter uppercase mb-8">
+                        Learn & <span className="text-maaviiOrange">Grow</span>
+                    </h2>
+
+                    <p className="text-2xl text-charcoal/80 font-serif italic max-w-3xl mx-auto glass-vibrant p-8 rounded-3xl border-2 border-maaviiTeal shadow-xl">
+                        {t('educationSubtitle') || "Master the art of African and Fusion cuisine through our professional workshops and training programs."}
+                    </p>
                 </div>
 
-                <div className="flex flex-wrap justify-center gap-4 mb-16">
+                <div className="flex flex-wrap justify-center gap-6 mb-20">
                     {[
                         { id: 'workshops', label: 'Workshops', icon: ChefHat },
-                        { id: 'training', label: 'Training Programs', icon: Award },
+                        { id: 'training', label: 'Pro Training', icon: Award },
                         { id: 'catering', label: 'Catering', icon: Users },
                         { id: 'events', label: 'Events', icon: Calendar }
                     ].map(tab => {
                         const Icon = tab.icon;
+                        const isActive = activeTab === tab.id;
                         return (
                             <button
                                 key={tab.id}
-                                onClick={() => setActiveTab(tab.id as 'workshops' | 'training' | 'catering' | 'events')}
-                                className={`flex items-center gap-2 px-6 py-4 rounded-xl font-bold transition-all border-3 ${activeTab === tab.id
-                                    ? 'bg-maaviiTeal text-cream border-charcoal'
-                                    : 'bg-cream border-charcoal/10 text-charcoal hover:border-maaviiTeal'
+                                onClick={() => setActiveTab(tab.id as any)}
+                                className={`flex items-center gap-4 px-10 py-6 rounded-[2rem] font-black text-xl uppercase tracking-widest transition-all shadow-2xl ${isActive
+                                    ? 'vibrant-gradient text-white scale-110 border-b-8 border-maaviiChocolate'
+                                    : 'bg-white border-4 border-charcoal/5 text-charcoal hover:border-maaviiOrange hover:-translate-y-2'
                                     }`}
                             >
-                                <Icon className="w-5 h-5" />
+                                <Icon className={`w-8 h-8 ${isActive ? 'animate-spin-slow' : 'text-maaviiOrange'}`} />
                                 {tab.label}
                             </button>
                         );
@@ -155,37 +156,40 @@ const EducationServices: React.FC = () => {
 
                 {/* Workshops */}
                 {activeTab === 'workshops' && (
-                    <div className="space-y-8">
-                        <div className="grid md:grid-cols-2 gap-8">
+                    <div className="space-y-12 animate-in fade-in slide-in-from-bottom duration-700">
+                        <div className="grid md:grid-cols-2 gap-12">
                             {workshops.map((workshop, idx) => (
-                                <div key={idx} className="bg-white rounded-2xl overflow-hidden border-3 border-charcoal/5 hover:shadow-xl transition-all group">
-                                    <div className="h-48 overflow-hidden">
+                                <div key={idx} className="bg-white rounded-[3.5rem] overflow-hidden border-[12px] border-white shadow-2xl hover:border-maaviiOrange transition-all duration-500 group flex flex-col hover:-translate-y-4">
+                                    <div className="h-64 overflow-hidden relative">
                                         <img
                                             src={workshop.image}
                                             alt={workshop.title}
                                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                         />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-maaviiChocolate/60 via-transparent to-transparent opacity-60"></div>
+                                        <div className="absolute top-0 right-0 w-32 h-32 african-pattern opacity-0 group-hover:opacity-10 transition-opacity rounded-bl-[4rem]"></div>
                                     </div>
-                                    <div className="p-6">
-                                        <h3 className="text-2xl font-black text-charcoal mb-3">{workshop.title}</h3>
-                                        <p className="text-charcoal/60 font-serif mb-6">{workshop.description}</p>
-                                        <div className="space-y-2 mb-6 text-sm font-bold text-charcoal/70">
-                                            <div className="flex items-center gap-2">
-                                                <Clock className="w-4 h-4" />
+                                    <div className="p-10 flex-grow flex flex-col">
+                                        <h3 className="text-3xl font-black text-charcoal mb-4 uppercase tracking-tight leading-tight group-hover:text-maaviiOrange transition-colors">{workshop.title}</h3>
+                                        <p className="text-charcoal/70 font-serif mb-8 text-xl italic border-l-4 border-maaviiTeal/30 pl-4 flex-grow">{workshop.description}</p>
+
+                                        <div className="grid grid-cols-2 gap-4 mb-8">
+                                            <div className="flex items-center gap-3 text-sm font-black text-charcoal/60 uppercase tracking-widest bg-maaviiTeal/10 p-4 rounded-2xl">
+                                                <Clock className="w-6 h-6 text-maaviiTeal" />
                                                 {workshop.duration}
                                             </div>
-                                            <div className="flex items-center gap-2">
-                                                <Users className="w-4 h-4" />
+                                            <div className="flex items-center gap-3 text-sm font-black text-charcoal/60 uppercase tracking-widest bg-maaviiOrange/10 p-4 rounded-2xl">
+                                                <Users className="w-6 h-6 text-maaviiOrange" />
                                                 {workshop.capacity}
                                             </div>
-                                            <div className="flex items-center gap-2">
-                                                <Calendar className="w-4 h-4" />
-                                                {workshop.schedule}
-                                            </div>
                                         </div>
-                                        <div className="flex items-center justify-between">
-                                            <span className="text-2xl font-black text-maaviiOrange">{workshop.price}</span>
-                                            <button className="px-6 py-3 bg-charcoal text-cream rounded-lg font-bold hover:bg-maaviiOrange transition-colors">
+
+                                        <div className="flex items-center justify-between pt-8 border-t-4 border-double border-charcoal/10">
+                                            <div className="leading-none">
+                                                <span className="text-sm font-black text-charcoal/40 uppercase block mb-1">Fee</span>
+                                                <span className="text-4xl font-black text-maaviiOrange tracking-tighter">{workshop.price}</span>
+                                            </div>
+                                            <button className="px-10 py-5 bg-charcoal text-maaviiYellow rounded-2xl font-black text-xl hover:bg-maaviiOrange hover:text-white transition-all hover:scale-110 shadow-xl border-b-6 border-maaviiChocolate uppercase">
                                                 Register
                                             </button>
                                         </div>
@@ -200,32 +204,40 @@ const EducationServices: React.FC = () => {
                 {activeTab === 'training' && (
                     <div className="space-y-8">
                         {trainingPrograms.map((program, idx) => (
-                            <div key={idx} className="bg-white rounded-2xl p-8 border-3 border-charcoal/5 hover:shadow-xl transition-all">
-                                <div className="grid md:grid-cols-3 gap-8 items-center">
-                                    <div>
-                                        <h3 className="text-3xl font-black text-charcoal mb-3">{program.title}</h3>
-                                        <p className="text-charcoal/60 font-serif mb-6">{program.description}</p>
-                                        <div className="space-y-2 text-charcoal/70 font-serif">
-                                            <p><strong>Duration:</strong> {program.duration}</p>
-                                            <p><strong>Start Date:</strong> {program.startDate}</p>
+                            <div key={idx} className="bg-white rounded-[3rem] p-10 border-[10px] border-white shadow-2xl hover:border-maaviiTeal transition-all duration-500 group">
+                                <div className="grid md:grid-cols-3 gap-12 items-center">
+                                    <div className="space-y-6">
+                                        <h3 className="text-3xl font-black text-charcoal uppercase tracking-tight">{program.title}</h3>
+                                        <p className="text-charcoal/70 font-serif text-xl italic border-l-4 border-maaviiOrange pl-6">{program.description}</p>
+                                        <div className="space-y-3 font-black text-sm uppercase tracking-widest text-maaviiTeal bg-maaviiTeal/10 p-6 rounded-2xl">
+                                            <p className="flex justify-between"><span>Duration:</span> <span className="text-charcoal">{program.duration}</span></p>
+                                            <p className="flex justify-between"><span>Start:</span> <span className="text-charcoal">{program.startDate}</span></p>
                                         </div>
                                     </div>
-                                    <div>
-                                        <h4 className="font-black text-charcoal mb-4 uppercase">Topics Covered</h4>
-                                        <ul className="space-y-2 text-charcoal/70 font-serif">
+                                    <div className="bg-charcoal/5 p-8 rounded-[2rem] border-4 border-dashed border-charcoal/10">
+                                        <h4 className="font-black text-charcoal mb-6 uppercase tracking-widest text-sm">Curriculum</h4>
+                                        <ul className="space-y-3 text-charcoal/80 font-serif italic text-lg">
                                             {program.topics.map((topic, i) => (
-                                                <li key={i}>✓ {topic}</li>
+                                                <li key={i} className="flex items-center gap-3">
+                                                    <Award size={20} className="text-maaviiOrange" />
+                                                    {topic}
+                                                </li>
                                             ))}
                                         </ul>
                                     </div>
-                                    <div className="text-center">
-                                        <div className="text-4xl font-black text-maaviiOrange mb-6">{program.price}</div>
-                                        <button className="w-full px-6 py-4 bg-charcoal text-cream rounded-xl font-black hover:bg-maaviiOrange transition-colors mb-3">
-                                            Apply Now
-                                        </button>
-                                        <button className="w-full px-6 py-2 bg-cream border-2 border-charcoal text-charcoal rounded-xl font-bold hover:bg-charcoal/5">
-                                            Learn More
-                                        </button>
+                                    <div className="text-center space-y-8">
+                                        <div className="leading-none">
+                                            <span className="text-sm font-black text-charcoal/40 uppercase block mb-2">Program Fee</span>
+                                            <div className="text-5xl font-black text-maaviiOrange tracking-tighter">{program.price}</div>
+                                        </div>
+                                        <div className="flex flex-col gap-4">
+                                            <button className="w-full px-10 py-6 bg-charcoal text-maaviiYellow rounded-[2rem] font-black text-xl hover:bg-maaviiOrange hover:text-white transition-all shadow-xl border-b-6 border-maaviiChocolate uppercase">
+                                                Apply Now
+                                            </button>
+                                            <button className="w-full px-10 py-4 bg-white border-4 border-charcoal/5 text-charcoal rounded-[2rem] font-black hover:border-maaviiTeal transition-all uppercase text-sm tracking-widest">
+                                                Learn More
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -238,25 +250,32 @@ const EducationServices: React.FC = () => {
                     <div className="space-y-8">
                         <div className="grid md:grid-cols-2 gap-8">
                             {cateringServices.map((service, idx) => (
-                                <div key={idx} className="p-8 bg-white rounded-2xl border-3 border-charcoal/5 hover:shadow-xl transition-all">
-                                    <h3 className="text-2xl font-black text-charcoal mb-2">{service.type}</h3>
-                                    <p className="text-charcoal/60 font-serif mb-6">{service.description}</p>
-                                    <div className="space-y-3 mb-6 text-charcoal/70 font-bold">
-                                        <p><strong>Capacity:</strong> {service.capacity}</p>
-                                        <p><strong>Minimum Order:</strong> <span className="text-maaviiOrange text-lg">{service.minOrder}</span></p>
+                                <div key={idx} className="p-10 bg-white rounded-[3.5rem] border-[12px] border-white shadow-2xl hover:border-maaviiOrange transition-all duration-500 group">
+                                    <h3 className="text-3xl font-black text-charcoal mb-4 uppercase tracking-tight">{service.type}</h3>
+                                    <p className="text-charcoal/70 font-serif text-xl italic mb-8 border-l-4 border-maaviiTeal pl-6">{service.description}</p>
+                                    <div className="grid grid-cols-2 gap-6 mb-10">
+                                        <div className="bg-maaviiTeal/10 p-6 rounded-2xl">
+                                            <p className="text-xs font-black text-maaviiTeal uppercase tracking-widest mb-1">Capacity</p>
+                                            <p className="font-black text-charcoal text-lg">{service.capacity}</p>
+                                        </div>
+                                        <div className="bg-maaviiOrange/10 p-6 rounded-2xl">
+                                            <p className="text-xs font-black text-maaviiOrange uppercase tracking-widest mb-1">Min Order</p>
+                                            <p className="font-black text-maaviiOrange text-lg">{service.minOrder}</p>
+                                        </div>
                                     </div>
-                                    <button className="w-full px-6 py-4 bg-charcoal text-cream rounded-lg font-black hover:bg-maaviiOrange transition-colors">
+                                    <button className="w-full px-10 py-6 bg-charcoal text-maaviiYellow rounded-[2rem] font-black text-2xl hover:bg-maaviiOrange hover:text-white transition-all shadow-xl border-b-6 border-maaviiChocolate uppercase">
                                         Get Quote
                                     </button>
                                 </div>
                             ))}
                         </div>
-                        <div className="p-8 bg-maaviiYellow/10 rounded-2xl border-3 border-maaviiYellow">
-                            <h4 className="text-2xl font-black text-charcoal mb-4">Catering Inquiry Form</h4>
-                            <p className="text-charcoal/70 font-serif mb-6">
-                                Tell us about your event and we&apos;ll create a customized catering proposal just for you.
+                        <div className="p-12 rounded-[4rem] border-[12px] border-maaviiYellow/20 bg-maaviiYellow/5 shadow-2xl relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 w-64 h-64 african-pattern opacity-5 rounded-bl-[8rem]"></div>
+                            <h4 className="text-4xl font-black text-charcoal mb-6 uppercase tracking-tighter">Custom Inquiry</h4>
+                            <p className="text-2xl text-charcoal/70 font-serif italic mb-10 max-w-2xl leading-relaxed">
+                                Tell us about your event and we&apos;ll create a <span className="text-maaviiOrange font-black underline decoration-maaviiYellow underline-offset-8">bespoke catering experience</span> just for you.
                             </p>
-                            <button className="px-8 py-4 bg-charcoal text-cream rounded-lg font-black hover:bg-maaviiOrange transition-colors">
+                            <button className="px-12 py-8 bg-charcoal text-maaviiYellow rounded-[2.5rem] font-black text-2xl hover:bg-maaviiOrange hover:text-white transition-all shadow-2xl border-b-8 border-maaviiChocolate uppercase">
                                 Start Catering Inquiry
                             </button>
                         </div>
@@ -267,22 +286,29 @@ const EducationServices: React.FC = () => {
                 {activeTab === 'events' && (
                     <div className="space-y-8">
                         {events.map((event, idx) => (
-                            <div key={idx} className="p-8 bg-white rounded-2xl border-3 border-charcoal/5 hover:shadow-xl transition-all">
-                                <div className="flex flex-col md:flex-row md:items-center gap-8">
-                                    <div className="flex-1">
-                                        <h3 className="text-3xl font-black text-charcoal mb-4">{event.title}</h3>
-                                        <div className="space-y-3 text-charcoal/70 font-serif mb-6">
-                                            <p><strong>Date:</strong> {event.date}</p>
-                                            <p><strong>Time:</strong> {event.time}</p>
-                                            <p><strong>Location:</strong> {event.location}</p>
+                            <div key={idx} className="bg-white rounded-[3.5rem] p-12 border-[12px] border-white shadow-2xl hover:border-maaviiTeal transition-all duration-500 group">
+                                <div className="flex flex-col lg:flex-row lg:items-center gap-16">
+                                    <div className="flex-1 space-y-8">
+                                        <div className="flex items-center gap-6">
+                                            <div className="w-20 h-20 bg-maaviiTeal/10 rounded-3xl flex items-center justify-center text-maaviiTeal group-hover:bg-maaviiTeal group-hover:text-white transition-all">
+                                                <Calendar size={40} />
+                                            </div>
+                                            <div>
+                                                <h3 className="text-4xl font-black text-charcoal uppercase tracking-tighter">{event.title}</h3>
+                                                <p className="text-maaviiOrange font-black uppercase tracking-[0.2em]">{event.date}</p>
+                                            </div>
                                         </div>
-                                        <p className="text-charcoal/60 font-serif">{event.description}</p>
+                                        <div className="grid md:grid-cols-2 gap-8 text-xl text-charcoal/70 font-serif italic border-l-4 border-maaviiTeal pl-8">
+                                            <p className="flex items-center gap-3"><Clock className="text-maaviiTeal shrink-0" /> {event.time}</p>
+                                            <p className="flex items-center gap-3"><Award className="text-maaviiTeal shrink-0" /> {event.location}</p>
+                                        </div>
+                                        <p className="text-2xl text-charcoal/60 leading-relaxed">{event.description}</p>
                                     </div>
-                                    <div className="flex flex-col gap-3">
-                                        <button className="px-8 py-4 bg-maaviiTeal text-cream rounded-lg font-black hover:bg-teal-700 transition-colors whitespace-nowrap">
+                                    <div className="flex flex-col gap-6">
+                                        <button className="px-12 py-8 bg-maaviiTeal text-charcoal rounded-[2.5rem] font-black text-2xl hover:bg-maaviiOrange hover:text-white transition-all shadow-2xl border-b-8 border-maaviiChocolate uppercase">
                                             Register
                                         </button>
-                                        <button className="px-8 py-4 bg-cream border-2 border-charcoal text-charcoal rounded-lg font-bold hover:bg-charcoal/5">
+                                        <button className="px-12 py-4 bg-white border-4 border-charcoal/5 text-charcoal rounded-[2.5rem] font-black hover:border-maaviiTeal transition-all uppercase text-sm tracking-widest">
                                             Learn More
                                         </button>
                                     </div>

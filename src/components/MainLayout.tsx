@@ -13,7 +13,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     const [isCartOpen, setIsCartOpen] = useState(false);
 
     return (
-        <div className="min-h-screen bg-cream text-charcoal selection:bg-deepRed/10">
+        <div className="min-h-screen bg-white text-charcoal selection:bg-maaviiOrange/30">
             <Header onCartToggle={() => setIsCartOpen(true)} />
             <main className="pt-24 min-h-screen">
                 {children}

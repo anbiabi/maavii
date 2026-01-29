@@ -5,33 +5,95 @@
   --foreground: #1A1A1A;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+@theme {
+  --color-maavii-gold: #EAB308;
+  --color-maavii-teal: #06B6D4;
+  --color-maavii-orange: #F97316;
+  --color-maavii-yellow: #FACC15;
+  --color-maavii-red: #E11D48;
+  --color-maavii-green: #10B981;
+  --color-maavii-purple: #8B5CF6;
+  --color-maavii-chocolate: #451a03;
+  --color-cream: #FFFDF5;
+  --color-deep-red: #B91C1C;
+  --color-charcoal: #1A1A1A;
+
   --font-sans: var(--font-geologica);
   --font-serif: var(--font-lora);
+
+  --animate-bounce-slow: bounce 3s infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-spin-slow: spin 8s linear infinite;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-cream);
+  color: var(--color-charcoal);
   font-family: var(--font-serif);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-sans);
 }
 
 .african-pattern {
-  background-color: #FBBF24;
-  background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
+  background-color: #FACC15;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23F97316' fill-opacity='0.25'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4v-4H4v4H0v2h4v4h2v-4h4v-2H6zm30 0v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.mask-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10 L80 40 L50 70 L20 40 Z' fill='none' stroke='%23F97316' stroke-width='3' opacity='0.3'/%3E%3Ccircle cx='50' cy='40' r='8' fill='%2306B6D4' opacity='0.3'/%3E%3Cpath d='M10 50 L40 80 L70 50 L40 20 Z' fill='none' stroke='%23E11D48' stroke-width='2' opacity='0.15'/%3E%3C/svg%3E");
+  background-repeat: repeat;
 }
 
 .tribal-border {
-  border-image: repeating-linear-gradient(45deg, #EA580C, #EA580C 10px, #FBBF24 10px, #FBBF24 20px, #0D9488 20px, #0D9488 30px) 20;
+  border-image: repeating-linear-gradient(45deg,
+      #F97316, #F97316 15px,
+      #FACC15 15px, #FACC15 30px,
+      #06B6D4 30px, #06B6D4 45px,
+      #E11D48 45px, #E11D48 60px) 30;
+  border-width: 10px;
+}
+
+.vibrant-gradient {
+  background: linear-gradient(135deg, #F97316 0%, #E11D48 50%, #8B5CF6 100%);
+  background-size: 200% 200%;
+  animation: gradient-move 5s ease infinite;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .logo-circle {
-  background: radial-gradient(circle, #EAB308 0%, #A16207 100%);
-  border: 4px double #451a03;
+  background: radial-gradient(circle, #FACC15 0%, #F97316 70%, #451a03 100%);
+  border: 4px double #FFFDF5;
+  box-shadow: 0 0 30px rgba(249, 115, 22, 0.6);
+}
+
+.glass-vibrant {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(249, 115, 22, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.text-stroke-vibrant {
+  -webkit-text-stroke: 1px #F97316;
+  text-shadow: 2px 2px 0px #FACC15;
 }
