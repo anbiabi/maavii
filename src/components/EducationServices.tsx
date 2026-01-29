@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Users, ChefHat, Award, Calendar, Clock } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import Container from './ui/Container';
@@ -189,9 +190,9 @@ const EducationServices: React.FC = () => {
                                                 <span className="text-sm font-black text-charcoal/40 uppercase block mb-1">Fee</span>
                                                 <span className="text-4xl font-black text-maaviiOrange tracking-tighter">{workshop.price}</span>
                                             </div>
-                                            <button className="px-10 py-5 bg-charcoal text-maaviiYellow rounded-2xl font-black text-xl hover:bg-maaviiOrange hover:text-white transition-all hover:scale-110 shadow-xl border-b-6 border-maaviiChocolate uppercase">
+                                            <Link href="#contact" className="px-10 py-5 bg-charcoal text-maaviiYellow rounded-2xl font-black text-xl hover:bg-maaviiOrange hover:text-white transition-all hover:scale-110 shadow-xl border-b-6 border-maaviiChocolate uppercase">
                                                 Register
-                                            </button>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -231,9 +232,9 @@ const EducationServices: React.FC = () => {
                                             <div className="text-5xl font-black text-maaviiOrange tracking-tighter">{program.price}</div>
                                         </div>
                                         <div className="flex flex-col gap-4">
-                                            <button className="w-full px-10 py-6 bg-charcoal text-maaviiYellow rounded-[2rem] font-black text-xl hover:bg-maaviiOrange hover:text-white transition-all shadow-xl border-b-6 border-maaviiChocolate uppercase">
+                                            <Link href="#contact" className="w-full px-10 py-6 bg-charcoal text-maaviiYellow rounded-[2rem] font-black text-xl hover:bg-maaviiOrange hover:text-white transition-all shadow-xl border-b-6 border-maaviiChocolate uppercase text-center">
                                                 Apply Now
-                                            </button>
+                                            </Link>
                                             <button className="w-full px-10 py-4 bg-white border-4 border-charcoal/5 text-charcoal rounded-[2rem] font-black hover:border-maaviiTeal transition-all uppercase text-sm tracking-widest">
                                                 Learn More
                                             </button>
@@ -263,9 +264,9 @@ const EducationServices: React.FC = () => {
                                             <p className="font-black text-maaviiOrange text-lg">{service.minOrder}</p>
                                         </div>
                                     </div>
-                                    <button className="w-full px-10 py-6 bg-charcoal text-maaviiYellow rounded-[2rem] font-black text-2xl hover:bg-maaviiOrange hover:text-white transition-all shadow-xl border-b-6 border-maaviiChocolate uppercase">
+                                    <Link href="#contact" className="w-full px-10 py-6 bg-charcoal text-maaviiYellow rounded-[2rem] font-black text-2xl hover:bg-maaviiOrange hover:text-white transition-all shadow-xl border-b-6 border-maaviiChocolate uppercase text-center">
                                         Get Quote
-                                    </button>
+                                    </Link>
                                 </div>
                             ))}
                         </div>
@@ -275,9 +276,9 @@ const EducationServices: React.FC = () => {
                             <p className="text-2xl text-charcoal/70 font-serif italic mb-10 max-w-2xl leading-relaxed">
                                 Tell us about your event and we&apos;ll create a <span className="text-maaviiOrange font-black underline decoration-maaviiYellow underline-offset-8">bespoke catering experience</span> just for you.
                             </p>
-                            <button className="px-12 py-8 bg-charcoal text-maaviiYellow rounded-[2.5rem] font-black text-2xl hover:bg-maaviiOrange hover:text-white transition-all shadow-2xl border-b-8 border-maaviiChocolate uppercase">
+                            <Link href="#contact" className="px-12 py-8 bg-charcoal text-maaviiYellow rounded-[2.5rem] font-black text-2xl hover:bg-maaviiOrange hover:text-white transition-all shadow-2xl border-b-8 border-maaviiChocolate uppercase inline-block">
                                 Start Catering Inquiry
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 )}
@@ -305,9 +306,9 @@ const EducationServices: React.FC = () => {
                                         <p className="text-2xl text-charcoal/60 leading-relaxed">{event.description}</p>
                                     </div>
                                     <div className="flex flex-col gap-6">
-                                        <button className="px-12 py-8 bg-maaviiTeal text-charcoal rounded-[2.5rem] font-black text-2xl hover:bg-maaviiOrange hover:text-white transition-all shadow-2xl border-b-8 border-maaviiChocolate uppercase">
+                                        <Link href="#contact" className="px-12 py-8 bg-maaviiTeal text-charcoal rounded-[2.5rem] font-black text-2xl hover:bg-maaviiOrange hover:text-white transition-all shadow-2xl border-b-8 border-maaviiChocolate uppercase text-center">
                                             Register
-                                        </button>
+                                        </Link>
                                         <button className="px-12 py-4 bg-white border-4 border-charcoal/5 text-charcoal rounded-[2.5rem] font-black hover:border-maaviiTeal transition-all uppercase text-sm tracking-widest">
                                             Learn More
                                         </button>

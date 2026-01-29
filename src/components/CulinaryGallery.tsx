@@ -13,20 +13,20 @@ const CulinaryGallery: React.FC = () => {
     ];
 
     return (
-        <section id="gallery" className="py-32 bg-maaviiChocolate text-cream overflow-hidden relative">
+        <section id="gallery" className="py-32 bg-white text-charcoal overflow-hidden relative">
             {/* Background Decorative Elements */}
-            <div className="absolute inset-0 mask-overlay opacity-10 pointer-events-none"></div>
-            <div className="absolute top-0 right-0 w-1/3 h-full african-pattern opacity-5 -skew-x-12 translate-x-1/2 pointer-events-none"></div>
+            <div className="absolute inset-0 mask-overlay opacity-20 pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-1/3 h-full african-pattern opacity-10 -skew-x-12 translate-x-1/2 pointer-events-none"></div>
 
             <Container className="relative z-10">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
                     <div className="max-w-2xl">
                         <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter mb-6 text-stroke-vibrant leading-none">Gallery</h2>
-                        <p className="text-2xl text-cream/80 font-serif italic border-l-[12px] border-maaviiOrange pl-8 glass-vibrant p-6 rounded-r-[2rem]">
-                            A visual journey through our <span className="text-maaviiYellow font-black">vibrant flavors</span> and colorful presentations.
+                        <p className="text-2xl text-charcoal/80 font-serif italic border-l-[12px] border-maaviiOrange pl-8 glass-vibrant p-6 rounded-r-[2rem]">
+                            A visual journey through our <span className="text-maaviiOrange font-black">vibrant flavors</span> and colorful presentations.
                         </p>
                     </div>
-                    <Link href="/gallery" className="px-12 py-6 bg-maaviiOrange text-white rounded-[2rem] font-black text-xl hover:bg-maaviiYellow hover:text-charcoal transition-all shadow-2xl border-b-6 border-black/30">
+                    <Link href="/gallery" className="px-12 py-6 bg-maaviiOrange text-maaviiChocolate rounded-[2rem] font-black text-xl hover:bg-maaviiTeal hover:text-white transition-all shadow-2xl border-b-6 border-black/30">
                         View Full Gallery
                     </Link>
                 </div>

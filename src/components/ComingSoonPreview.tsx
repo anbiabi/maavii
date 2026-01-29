@@ -48,7 +48,7 @@ const ComingSoonPreview: React.FC = () => {
 
                         <div className="pt-10">
                             <Link
-                                href="/vision"
+                                href="/coming-soon"
                                 className="inline-flex items-center gap-6 px-12 py-8 bg-charcoal text-maaviiYellow rounded-[3rem] font-black text-2xl hover:bg-maaviiOrange hover:text-white transition-all hover:scale-110 shadow-2xl border-b-8 border-maaviiChocolate group"
                             >
                                 <Truck className="w-10 h-10 group-hover:bounce" />

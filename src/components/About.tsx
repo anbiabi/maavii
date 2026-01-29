@@ -73,7 +73,7 @@ const About: React.FC = () => {
               </div>
 
               <div className="ml-auto">
-                <Link href="/about" className="px-12 py-6 bg-maaviiTeal text-charcoal rounded-[2rem] font-black text-xl hover:bg-maaviiOrange hover:text-white transition-all hover:scale-110 shadow-2xl inline-block border-b-6 border-black/20">
+                <Link href="#" className="px-12 py-6 bg-maaviiTeal text-charcoal rounded-[2rem] font-black text-xl hover:bg-maaviiOrange hover:text-white transition-all hover:scale-110 shadow-2xl inline-block border-b-6 border-black/20">
                   Learn More About Us
                 </Link>
               </div>
