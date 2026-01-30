@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
           {/* Main Visual - BOLDER FRAME */}
           <div className="aspect-square relative rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.2)] md:shadow-[0_60px_100px_rgba(0,0,0,0.3)] border-[10px] md:border-[20px] border-white rotate-2 transition-all group-hover:rotate-0 duration-700">
             <img
-              src="/images/food/cameroonian-meal-platter.jpg"
+              src="/images/food/signature-meal-platter.jpg"
               alt="Maavii Culinary Art"
               className="w-full h-full object-cover scale-110 group-hover:scale-105 transition-transform duration-700"
             />
