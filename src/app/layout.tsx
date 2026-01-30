@@ -18,11 +18,11 @@ const lora = Lora({
 
 export const metadata: Metadata = {
   title: "MAAVII | African Cultural Hub & Fusion Cuisine Busan",
-  description: "Authentic African ingredients and fusion cuisine in Busan, South Korea. Experience West African flavors blended with Korean traditions. Shop African groceries nationwide.",
-  keywords: ["African Food Busan", "Korean Fusion", "African Grocery Korea", "Miondo Korea", "Cultural Hub Busan", "MAAVII"],
+  description: "Authentic premium ingredients and African fusion cuisine in Busan, South Korea. Experience unique flavors blended with Korean traditions. Shop specialty groceries nationwide.",
+  keywords: ["Fusion Food Busan", "Korean Fusion", "Specialty Grocery Korea", "Miondo Korea", "Cultural Hub Busan", "MAAVII"],
   openGraph: {
     title: "MAAVII | African Cultural Hub in Busan",
-    description: "Soulful heat of West Africa meets Korean traditions. Restaurant, Marketplace, and Cultural Center.",
+    description: "Soulful heat of African spices meets Korean traditions. Restaurant, Marketplace, and Cultural Center.",
     type: "website",
     locale: "en_US",
     url: "https://maavii.com",
@@ -54,7 +54,7 @@ export default function RootLayout({
       "latitude": 35.1796,
       "longitude": 129.0756
     },
-    "servesCuisine": ["African", "Korean Fusion"],
+    "servesCuisine": ["African Fusion", "Korean Fusion"],
     "priceRange": "$$",
     "openingHoursSpecification": [
       {

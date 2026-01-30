@@ -18,7 +18,7 @@ export const services = [
   },
   {
     icon: <Utensils className="w-8 h-8" />,
-    title: "Cameroonian Corner",
-    description: "Enjoy authentic Cameroonian dishes for dine-in or take-away. A true taste of home."
+    title: "Heritage Corner",
+    description: "Enjoy authentic signature dishes for dine-in or take-away. A true taste of home."
   }
 ];

@@ -29,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
     { name: t('navServices'), href: '/#services', isHash: true },
     { name: t('navMenu'), href: '/#menu', isHash: true },
     { name: t('navGrocery'), href: '/#grocery', isHash: true },
-    { name: t('navComingSoon'), href: '/coming-soon', isHash: false },
+    { name: t('navComingSoon'), href: '/#vision', isHash: true },
     { name: t('navContact'), href: '/#contact', isHash: true },
   ];
 
@@ -62,22 +62,22 @@ const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b-[6px] border-maaviiOrange shadow-xl">
-      <div className="max-w-7xl mx-auto px-4 h-24 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b-[4px] md:border-b-[6px] border-maaviiOrange shadow-xl">
+      <div className="max-w-7xl mx-auto px-4 h-16 md:h-24 flex items-center justify-between">
         {/* Logo Section */}
         <Link
           href="/"
           onClick={(e) => handleNavClick(e, '/', false)}
-          className="flex items-center gap-3 group cursor-pointer shrink-0"
+          className="flex items-center gap-2 md:gap-3 group cursor-pointer shrink-0"
         >
-          <div className="logo-circle p-1 rounded-full transform group-hover:scale-110 transition-transform">
+          <div className="logo-circle p-0.5 md:p-1 rounded-full transform group-hover:scale-110 transition-transform">
             <Logo size="sm" />
           </div>
-          <div className="hidden lg:block leading-none">
-            <span className="font-black text-3xl tracking-tighter text-charcoal uppercase italic">
+          <div className="leading-none">
+            <span className="font-black text-xl md:text-3xl tracking-tighter text-charcoal uppercase italic">
               MAAVII<span className="text-maaviiOrange">S</span>
             </span>
-            <p className="text-[10px] font-black text-maaviiTeal uppercase tracking-[0.3em] block mt-1">
+            <p className="text-[8px] md:text-[10px] font-black text-maaviiTeal uppercase tracking-[0.2em] md:tracking-[0.3em] block mt-0.5 md:mt-1">
               • CULINARY FUSION •
             </p>
           </div>
@@ -100,42 +100,42 @@ const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
         </nav>
 
         {/* Actions */}
-        <div className="flex items-center gap-4 shrink-0">
+        <div className="flex items-center gap-2 md:gap-4 shrink-0">
           <button
             onClick={() => setLanguage(language === 'EN' ? 'KR' : 'EN')}
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-maaviiTeal text-charcoal hover:bg-maaviiOrange hover:text-white transition-all font-black shadow-lg active:scale-95 border-b-4 border-black/20"
+            className="flex items-center gap-1.5 md:gap-2 px-2.5 py-1.5 md:px-4 md:py-2 rounded-xl bg-maaviiTeal text-charcoal hover:bg-maaviiOrange hover:text-white transition-all font-black shadow-lg active:scale-95 border-b-2 md:border-b-4 border-black/20"
           >
-            <Globe className="w-5 h-5 animate-spin-slow" />
-            <span className="text-sm font-black">{language}</span>
+            <Globe className="w-4 h-4 md:w-5 md:h-5 animate-spin-slow" />
+            <span className="text-xs md:text-sm font-black">{language}</span>
           </button>
 
           <button
             onClick={onCartToggle}
-            className="relative p-3 bg-maaviiYellow text-charcoal rounded-2xl shadow-xl hover:scale-110 transition-all active:scale-95 border-b-4 border-maaviiOrange"
+            className="relative p-2 md:p-3 bg-maaviiYellow text-charcoal rounded-xl md:rounded-2xl shadow-xl hover:scale-110 transition-all active:scale-95 border-b-2 md:border-b-4 border-maaviiOrange"
             aria-label="View Shopping Cart"
           >
-            <ShoppingCart className="w-7 h-7" />
+            <ShoppingCart className="w-5 h-5 md:w-7 md:h-7" />
             {mounted && itemCount > 0 && (
-              <span className="absolute -top-3 -right-3 w-8 h-8 vibrant-gradient text-white text-xs font-black rounded-full flex items-center justify-center ring-4 ring-white shadow-2xl animate-bounce">
+              <span className="absolute -top-2 -right-2 md:-top-3 md:-right-3 w-6 h-6 md:w-8 md:h-8 vibrant-gradient text-white text-[10px] md:text-xs font-black rounded-full flex items-center justify-center ring-2 md:ring-4 ring-white shadow-2xl animate-bounce">
                 {itemCount}
               </span>
             )}
           </button>
 
           <button
-            className="xl:hidden p-3 bg-maaviiOrange text-white rounded-xl shadow-lg hover:scale-105 transition-all"
+            className="xl:hidden p-2 md:p-3 bg-maaviiOrange text-white rounded-xl shadow-lg hover:scale-105 transition-all"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
+            {isMenuOpen ? <X size={24} className="md:w-8 md:h-8" /> : <Menu size={24} className="md:w-8 md:h-8" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Nav Overlay */}
       {isMenuOpen && (
-        <div className="xl:hidden fixed inset-x-0 top-24 bg-maaviiYellow border-b-[10px] border-maaviiOrange shadow-2xl animate-in slide-in-from-top duration-500 min-h-screen overflow-y-auto african-pattern">
+        <div className="xl:hidden fixed inset-x-0 top-16 bg-maaviiYellow border-b-[8px] md:border-b-[10px] border-maaviiOrange shadow-2xl animate-in slide-in-from-top duration-500 min-h-screen overflow-y-auto african-pattern">
           <div className="absolute inset-0 bg-white/40 backdrop-blur-sm pointer-events-none"></div>
-          <nav className="relative z-10 px-8 py-12 flex flex-col gap-8">
+          <nav className="relative z-10 px-8 py-10 flex flex-col gap-6 md:gap-8">
             {navLinks.map((link, idx) => (
               <Link
                 key={link.name}
@@ -144,10 +144,10 @@ const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
                 className="flex items-center group"
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
-                <span className="text-5xl font-black text-charcoal group-hover:text-maaviiOrange transition-colors uppercase tracking-tight group-hover:translate-x-4 duration-300">
+                <span className="text-3xl sm:text-4xl md:text-5xl font-black text-charcoal group-hover:text-maaviiOrange transition-colors uppercase tracking-tight group-hover:translate-x-4 duration-300">
                   {link.name}
                 </span>
-                <span className="ml-4 w-0 h-2 bg-maaviiOrange group-hover:w-full transition-all duration-500 rounded-full"></span>
+                <span className="ml-4 w-0 h-1 md:h-2 bg-maaviiOrange group-hover:w-full transition-all duration-500 rounded-full"></span>
               </Link>
             ))}
             <div className="mt-12 pt-8 border-t-4 border-maaviiOrange/30">

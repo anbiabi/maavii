@@ -34,7 +34,7 @@ const rawMenuItems = [
     { file: "11_rolled_crepes_panquecas.jpg", cat: "Desserts", price: 5 },
     { file: "boiled_cassava_manioc.png", cat: "Mains", price: 7 },
     { file: "cabage stew.jpg", cat: "Mains", price: 8 },
-    { file: "cameroonian-meal-platter.jpg", cat: "Specials", price: 45 },
+    { file: "signature-meal-platter.jpg", cat: "Specials", price: 45 },
     { file: "ndole-fish-meal.jpg", cat: "Specials", price: 45 },
     { file: "party-menu.jpg", cat: "Specials", price: 45 },
     { file: "party-platter.jpg.jpg", cat: "Specials", price: 45 },
@@ -133,23 +133,23 @@ const FullMenu: React.FC = () => {
             <Container>
 
                 {/* Header */}
-                <div className="text-center mb-16 pt-8">
-                    <h1 className="text-5xl md:text-7xl font-black text-charcoal uppercase tracking-tighter mb-4">
+                <div className="text-center mb-10 md:mb-16 pt-8">
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-charcoal uppercase tracking-tighter mb-4">
                         Maavii Menu
                     </h1>
-                    <p className="text-xl text-charcoal/60 font-serif italic max-w-2xl mx-auto">
+                    <p className="text-base sm:text-lg md:text-xl text-charcoal/60 font-serif italic max-w-2xl mx-auto px-4">
                         Explore our complete selection of savory dishes, snacks, and sweet treats.
                     </p>
                 </div>
 
                 {/* Controls: Search & Filter */}
-                <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-12 sticky top-24 z-30 bg-cream/95 backdrop-blur-md p-4 rounded-3xl shadow-sm border border-charcoal/5">
+                <div className="flex flex-col lg:flex-row justify-between items-center gap-6 mb-12 sticky top-[72px] md:top-24 z-30 bg-cream/95 backdrop-blur-md p-4 rounded-3xl shadow-sm border border-charcoal/5">
 
                     {/* Categories */}
                     <div className="flex flex-wrap justify-center gap-2">
                         <button
                             onClick={() => setActiveCategory("All")}
-                            className={`px-5 py-2 rounded-full font-bold uppercase text-xs tracking-wider transition-all ${activeCategory === "All"
+                            className={`px-4 py-2 md:px-5 md:py-2 rounded-full font-bold uppercase text-[10px] md:text-xs tracking-wider transition-all ${activeCategory === "All"
                                 ? "bg-charcoal text-maaviiYellow shadow-md"
                                 : "bg-white text-charcoal border border-charcoal/10 hover:bg-gray-100"
                                 }`}
@@ -160,7 +160,7 @@ const FullMenu: React.FC = () => {
                             <button
                                 key={category}
                                 onClick={() => setActiveCategory(category)}
-                                className={`px-5 py-2 rounded-full font-bold uppercase text-xs tracking-wider transition-all ${activeCategory === category
+                                className={`px-4 py-2 md:px-5 md:py-2 rounded-full font-bold uppercase text-[10px] md:text-xs tracking-wider transition-all ${activeCategory === category
                                     ? "bg-charcoal text-maaviiYellow shadow-md"
                                     : "bg-white text-charcoal border border-charcoal/10 hover:bg-gray-100"
                                     }`}
@@ -171,13 +171,13 @@ const FullMenu: React.FC = () => {
                     </div>
 
                     {/* Search Bar */}
-                    <div className="relative w-full md:w-80">
+                    <div className="relative w-full lg:w-80">
                         <input
                             type="text"
                             placeholder="Search for a dish..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full pl-6 pr-12 py-3 rounded-full border-2 border-charcoal/10 bg-white focus:border-maaviiOrange focus:ring-0 outline-none transition-all font-serif"
+                            className="w-full pl-6 pr-12 py-3 rounded-full border-2 border-charcoal/10 bg-white focus:border-maaviiOrange focus:ring-0 outline-none transition-all font-serif text-sm"
                         />
                         <div className="absolute right-4 top-1/2 -translate-y-1/2 text-charcoal/40">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -214,8 +214,8 @@ const FullMenu: React.FC = () => {
                                     <button
                                         onClick={() => handleAddToCart(item)}
                                         className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center shadow-lg text-white transition-all duration-300 ${isJustAdded
-                                                ? 'bg-maaviiTeal scale-125 rotate-12'
-                                                : 'bg-maaviiOrange hover:scale-110 border-2 border-white'
+                                            ? 'bg-maaviiTeal scale-125 rotate-12'
+                                            : 'bg-maaviiOrange hover:scale-110 border-2 border-white'
                                             }`}
                                         title="Add to Cart"
                                     >
@@ -232,23 +232,23 @@ const FullMenu: React.FC = () => {
                                 </div>
 
                                 {/* Content */}
-                                <div className="p-8 flex flex-col flex-grow">
-                                    <span className="text-[10px] font-black text-maaviiOrange uppercase tracking-[0.2em] mb-3 block">
+                                <div className="p-6 md:p-8 flex flex-col flex-grow">
+                                    <span className="text-[10px] font-black text-maaviiOrange uppercase tracking-[0.2em] mb-2 md:mb-3 block">
                                         {item.category}
                                     </span>
-                                    <h3 className="text-2xl font-black text-charcoal mb-3 leading-tight group-hover:text-maaviiTeal transition-colors">
+                                    <h3 className="text-xl md:text-2xl font-black text-charcoal mb-2 md:mb-3 leading-tight group-hover:text-maaviiTeal transition-colors">
                                         {item.name}
                                     </h3>
-                                    <p className="text-charcoal/60 font-serif text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
+                                    <p className="text-charcoal/60 font-serif text-xs md:text-sm leading-relaxed mb-4 md:mb-6 flex-grow line-clamp-3">
                                         {item.description}
                                     </p>
 
                                     {/* Add to Cart Button in Content Area */}
                                     <button
                                         onClick={() => handleAddToCart(item)}
-                                        className={`mt-4 w-full py-3 rounded-full font-bold uppercase text-sm tracking-wider transition-all ${isJustAdded
-                                                ? 'bg-maaviiTeal text-maaviiYellow'
-                                                : 'bg-charcoal text-maaviiYellow hover:bg-maaviiOrange'
+                                        className={`mt-4 w-full py-3 rounded-full font-bold uppercase text-xs md:text-sm tracking-wider transition-all ${isJustAdded
+                                            ? 'bg-maaviiTeal text-maaviiYellow'
+                                            : 'bg-charcoal text-maaviiYellow hover:bg-maaviiOrange'
                                             }`}
                                     >
                                         {isJustAdded ? '✓ ADDED TO CART' : '+ ADD TO CART'}

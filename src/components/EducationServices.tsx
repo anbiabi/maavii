@@ -13,8 +13,8 @@ const EducationServices: React.FC = () => {
 
     const workshops = [
         {
-            title: 'Taste of Cameroon',
-            description: 'Learn authentic Cameroon cooking techniques in this immersive 2-hour class',
+            title: 'Taste of Heritage',
+            description: 'Learn authentic cooking techniques in this immersive 2-hour class',
             price: '₩35,000',
             duration: '2 hours',
             capacity: '12 participants',
@@ -22,8 +22,8 @@ const EducationServices: React.FC = () => {
             image: '/images/camerfoot.jpg'
         },
         {
-            title: 'Korean-African Fusion Cooking',
-            description: 'Discover how to blend Korean and African flavors in creative new dishes',
+            title: 'Signature Fusion Cooking',
+            description: 'Discover how to blend unique flavors in creative new dishes',
             price: '₩42,000',
             duration: '3 hours',
             capacity: '10 participants',
@@ -31,8 +31,8 @@ const EducationServices: React.FC = () => {
             image: '/images/food/salad.jpg'
         },
         {
-            title: 'African Spice Mastery',
-            description: 'Explore the rich variety of African spices and their traditional uses',
+            title: 'Spice Mastery',
+            description: 'Explore the rich variety of specialty spices and their traditional uses',
             price: '₩28,000',
             duration: '90 minutes',
             capacity: '15 participants',
@@ -40,8 +40,8 @@ const EducationServices: React.FC = () => {
             image: '/images/20251214_194752.jpg'
         },
         {
-            title: 'Traditional African Bread',
-            description: 'Master the art of making traditional African breads and pastries',
+            title: 'Traditional Bread',
+            description: 'Master the art of making traditional breads and pastries',
             price: '₩38,000',
             duration: '2.5 hours',
             capacity: '12 participants',
@@ -53,7 +53,7 @@ const EducationServices: React.FC = () => {
     const trainingPrograms = [
         {
             title: 'Food Truck Bootcamp',
-            description: 'Complete entrepreneurship program for starting an African food business',
+            description: 'Complete entrepreneurship program for starting a fusion food business',
             duration: '6 weeks',
             price: '₩480,000',
             topics: ['Business Planning', 'Menu Development', 'Operations', 'Marketing', 'Food Safety'],
@@ -69,7 +69,7 @@ const EducationServices: React.FC = () => {
         },
         {
             title: 'Professional Chef Certification',
-            description: 'Comprehensive certification in African and fusion cuisine',
+            description: 'Comprehensive certification in gourmet and fusion cuisine',
             duration: '12 weeks',
             price: '₩720,000',
             topics: ['Advanced Cooking', 'Food Science', 'Nutrition', 'Menu Planning', 'Restaurant Management'],
@@ -90,7 +90,7 @@ const EducationServices: React.FC = () => {
             date: 'March 15, 2026',
             time: '11:00 AM - 6:00 PM',
             location: 'Maavii Events Space',
-            description: 'Celebrate African culture with food, music, and crafts'
+            description: 'Celebrate our unique culture with food, music, and crafts'
         },
         {
             title: 'Themed Dinner Night',
@@ -104,7 +104,7 @@ const EducationServices: React.FC = () => {
             date: 'March 29, 2026',
             time: '2:00 PM - 4:30 PM',
             location: 'Maavii Kitchen Studio',
-            description: 'Perfect for first-time cookers - learn African basics'
+            description: 'Perfect for first-time cookers - learn the basics'
         }
     ];
 

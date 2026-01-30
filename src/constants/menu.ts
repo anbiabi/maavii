@@ -1,11 +1,11 @@
 export const menuItems = [
   {
     category: "Signature Brochettes",
-    description: "Our famous grilled skewers, marinated in a secret blend of African spices.",
+    description: "Our famous grilled skewers, marinated in a secret blend of specialty spices.",
     items: [
       {
         name: "Chicken Brochettes",
-        description: "Tender chicken pieces marinated in African spices and herbs, then grilled to perfection.",
+        description: "Tender chicken pieces marinated in specialty spices and herbs, then grilled to perfection.",
         price: "$3",
         image: "dsc0619.jpg"
       },
@@ -24,8 +24,8 @@ export const menuItems = [
     ]
   },
   {
-    category: "Cameroonian Corner",
-    description: "A taste of Cameroon, available for dine-in or take-away.",
+    category: "Heritage Corner",
+    description: "A taste of home, available for dine-in or take-away.",
     items: [
       {
         name: "Ndolé",
@@ -40,7 +40,7 @@ export const menuItems = [
         image: "poulet-dg.jpeg"
       },
       {
-        name: "African Rice",
+        name: "Signature Rice",
         description: "Aromatic rice cooked with mixed vegetables and spices.",
         price: "$8",
         image: "dsc0023.jpg"

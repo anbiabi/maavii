@@ -12,7 +12,7 @@ const Catering: React.FC = () => {
             Catering Services
           </h2>
           <p className="text-xl text-charcoal/70 max-w-3xl mx-auto font-serif italic">
-            Authentic African-Korean fusion catering for embassies, festivals, corporate events, and private parties
+            Signature Fusion catering for embassies, festivals, corporate events, and private parties
           </p>
         </div>
 
@@ -20,7 +20,7 @@ const Catering: React.FC = () => {
           <div>
             <h3 className="text-3xl font-black text-charcoal mb-6 uppercase">Event Catering</h3>
             <p className="text-charcoal/70 font-serif text-lg mb-6">
-              We provide authentic African-Korean fusion catering for embassies, festivals, corporate events, and private parties across Busan and Yangsan.
+              We provide signature fusion catering for embassies, festivals, corporate events, and private parties.
             </p>
             <p className="text-charcoal/70 font-serif text-lg">
               Contact us for custom menus and quotes tailored to your specific event needs.
@@ -53,20 +53,20 @@ const Catering: React.FC = () => {
         <div className="mt-16 text-center">
           <h3 className="text-3xl font-black text-charcoal mb-6 uppercase">Cultural Events</h3>
           <p className="text-xl text-charcoal/70 max-w-3xl mx-auto font-serif mb-8">
-            Maavii hosts monthly cultural nights featuring African music, dance, food tastings, and storytelling — open to the public. Follow @maaviifood on Instagram for updates.
+            Maavii hosts monthly cultural nights featuring soulful music, dance, food tastings, and storytelling — open to the public. Follow @maaviifood on Instagram for updates.
           </p>
           <div className="inline-flex gap-4">
-            <a 
-              href="https://www.instagram.com/maaviifood" 
-              target="_blank" 
+            <a
+              href="https://www.instagram.com/maaviifood"
+              target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-maaviiOrange text-cream rounded-xl font-black text-lg hover:bg-orange-700 transition-colors"
             >
               Follow on Instagram
             </a>
-            <a 
-              href="https://wa.me/821044092301" 
-              target="_blank" 
+            <a
+              href="https://wa.me/821044092301"
+              target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-green-500 text-white rounded-xl font-black text-lg hover:bg-green-600 transition-colors"
             >

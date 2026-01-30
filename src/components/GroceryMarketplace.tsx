@@ -15,28 +15,28 @@ const GroceryMarketplace: React.FC = () => {
     const groceryPreviewItems = [
         {
             id: 1,
-            name: 'Cameroon Black Peppercorns (Pebe)',
+            name: 'Black Peppercorns (Pebe)',
             category: 'Spices & Seasonings',
             price: 8500,
-            origin: 'Africa',
+            origin: 'Premium',
             image: '/images/grocery/Pebe.png',
-            description: 'Authentic Cameroon black peppercorns used for traditional seasoning.'
+            description: 'Authentic black peppercorns used for traditional seasoning.'
         },
         {
             id: 2,
-            name: 'Nigerian Palm Oil',
+            name: 'Red Palm Oil',
             category: 'Oils & Condiments',
             price: 12000,
-            origin: 'Africa',
+            origin: 'Premium',
             image: '/images/grocery/palm oil.jpg',
-            description: 'Pure red palm oil for traditional African cooking.'
+            description: 'Pure red palm oil for traditional cooking.'
         },
         {
             id: 3,
             name: 'Cassava Flour',
             category: 'Grains & Legumes',
             price: 6500,
-            origin: 'Africa',
+            origin: 'Premium',
             image: '/images/grocery/cassava-flour.jpg',
             description: 'Fine cassava flour for making traditional fufu.'
         }
@@ -64,7 +64,7 @@ const GroceryMarketplace: React.FC = () => {
         <div className="min-h-screen bg-white relative overflow-hidden pt-32 pb-32">
             {/* Background Decorations */}
             <div className="absolute inset-0 mask-overlay opacity-30 pointer-events-none"></div>
-            <div className="absolute top-0 right-0 w-2/3 h-full african-pattern opacity-10 -skew-x-12 translate-x-1/2 pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-2/3 h-full vibrant-pattern opacity-10 -skew-x-12 translate-x-1/2 pointer-events-none"></div>
 
             <Container className="relative z-10">
                 <div className="text-center mb-24">
@@ -74,11 +74,11 @@ const GroceryMarketplace: React.FC = () => {
                     </div>
 
                     <h2 className="text-6xl md:text-8xl font-black text-charcoal leading-none tracking-tighter uppercase mb-8">
-                        African <span className="text-maaviiTeal">Flavors</span>
+                        Gourmet <span className="text-maaviiTeal">Flavors</span>
                     </h2>
 
                     <p className="text-2xl text-charcoal/80 font-serif italic max-w-3xl mx-auto glass-vibrant p-10 rounded-3xl border-2 border-maaviiOrange shadow-xl">
-                        Hand-selected ingredients from the heart of Africa. <span className="text-maaviiOrange font-black">Authentic, premium, and delivered nationwide.</span>
+                        Hand-selected ingredients from around the world. <span className="text-maaviiOrange font-black">Authentic, premium, and delivered nationwide.</span>
                     </p>
                 </div>
 
@@ -97,7 +97,7 @@ const GroceryMarketplace: React.FC = () => {
                                     <div className="absolute inset-0 bg-gradient-to-t from-maaviiChocolate/40 via-transparent to-transparent opacity-60"></div>
 
                                     {/* Tribal pattern overlay on image hover */}
-                                    <div className="absolute inset-0 african-pattern opacity-0 group-hover:opacity-10 transition-opacity pointer-events-none"></div>
+                                    <div className="absolute inset-0 vibrant-pattern opacity-0 group-hover:opacity-10 transition-opacity pointer-events-none"></div>
 
                                     {/* Add to Cart Button on Image - BIGGER & BOLDER */}
                                     <button
@@ -120,9 +120,7 @@ const GroceryMarketplace: React.FC = () => {
                                     </button>
                                 </div>
                                 <div className="p-8 flex-grow flex flex-col">
-                                    <div className="mb-4 inline-block px-4 py-1.5 bg-maaviiTeal/15 text-maaviiChocolate text-xs font-black uppercase tracking-[0.3em] rounded-full self-start">
-                                        {item.origin}
-                                    </div>
+                                    {/* origin field removed per user request */}
                                     <h3 className="text-2xl font-black text-charcoal mb-3 uppercase tracking-tight leading-tight">{item.name}</h3>
                                     <p className="text-charcoal/70 font-serif text-lg mb-8 italic flex-grow leading-relaxed line-clamp-2">{item.description}</p>
 
@@ -159,7 +157,7 @@ const GroceryMarketplace: React.FC = () => {
             </Container>
 
             {/* Tribal border at bottom */}
-            <div className="absolute bottom-0 left-0 w-full h-8 african-pattern opacity-30"></div>
+            <div className="absolute bottom-0 left-0 w-full h-8 vibrant-pattern opacity-30"></div>
         </div>
     );
 };
