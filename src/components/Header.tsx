@@ -35,7 +35,6 @@ const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
 
   const handleNavClick = (e: React.MouseEvent<HTMLElement>, href: string, isHash: boolean) => {
     if (isHash) {
-      // If we are already on the home page, we can just scroll
       if (pathname === '/') {
         e.preventDefault();
         const targetId = href.replace('/#', '');
@@ -46,7 +45,6 @@ const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
           window.history.pushState(null, '', href);
         }
       } else {
-        // If we are not on home page, normal Link behavior will take us there
         setIsMenuOpen(false);
       }
     } else {
@@ -55,8 +53,8 @@ const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
   };
 
   const isActive = (href: string, isHash: boolean) => {
-    if (isHash) return false; // Hash links are part of home
-    if (!pathname) return false; // Handle null pathname
+    if (isHash) return false;
+    if (!pathname) return false;
     if (href === '/') return pathname === '/';
     return pathname.startsWith(href);
   };
@@ -68,7 +66,7 @@ const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
         <Link
           href="/"
           onClick={(e) => handleNavClick(e, '/', false)}
-          className="flex items-center gap-2 md:gap-3 group cursor-pointer shrink-0"
+          className="flex items-center gap-2 md:gap-3 group cursor-pointer shrink-0 hover:animate-wiggle"
         >
           <div className="logo-circle p-0.5 md:p-1 rounded-full transform group-hover:scale-110 transition-transform">
             <Logo size="sm" />
@@ -90,7 +88,7 @@ const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
               key={link.name}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href, link.isHash)}
-              className={`relative py-2 text-sm font-black uppercase tracking-[0.2em] transition-all duration-300 group/link ${isActive(link.href, link.isHash) ? 'text-maaviiOrange scale-110' : 'text-charcoal hover:text-maaviiOrange'
+              className={`relative py-2 text-sm font-black uppercase tracking-[0.2em] transition-all duration-300 group/link hover:animate-wiggle ${isActive(link.href, link.isHash) ? 'text-maaviiOrange scale-110' : 'text-charcoal hover:text-maaviiOrange'
                 }`}
             >
               {link.name}
@@ -103,7 +101,7 @@ const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
         <div className="flex items-center gap-2 md:gap-4 shrink-0">
           <button
             onClick={() => setLanguage(language === 'EN' ? 'KR' : 'EN')}
-            className="flex items-center gap-1.5 md:gap-2 px-2.5 py-1.5 md:px-4 md:py-2 rounded-xl bg-maaviiTeal text-charcoal hover:bg-maaviiOrange hover:text-white transition-all font-black shadow-lg active:scale-95 border-b-2 md:border-b-4 border-black/20"
+            className="flex items-center gap-1.5 md:gap-2 px-2.5 py-1.5 md:px-4 md:py-2 rounded-xl bg-maaviiTeal text-charcoal hover:bg-maaviiOrange hover:text-white transition-all font-black shadow-lg active:scale-95 border-b-2 md:border-b-4 border-black/20 hover:animate-jelly"
           >
             <Globe className="w-4 h-4 md:w-5 md:h-5 animate-spin-slow" />
             <span className="text-xs md:text-sm font-black">{language}</span>
@@ -111,7 +109,7 @@ const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
 
           <button
             onClick={onCartToggle}
-            className="relative p-2 md:p-3 bg-maaviiYellow text-charcoal rounded-xl md:rounded-2xl shadow-xl hover:scale-110 transition-all active:scale-95 border-b-2 md:border-b-4 border-maaviiOrange"
+            className="relative p-2 md:p-3 bg-maaviiYellow text-charcoal rounded-xl md:rounded-2xl shadow-xl hover:scale-110 transition-all active:scale-95 border-b-2 md:border-b-4 border-maaviiOrange hover:animate-bounce"
             aria-label="View Shopping Cart"
           >
             <ShoppingCart className="w-5 h-5 md:w-7 md:h-7" />
@@ -123,7 +121,7 @@ const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
           </button>
 
           <button
-            className="xl:hidden p-2 md:p-3 bg-maaviiOrange text-white rounded-xl shadow-lg hover:scale-105 transition-all"
+            className="xl:hidden p-2 md:p-3 bg-maaviiOrange text-white rounded-xl shadow-lg hover:scale-105 transition-all hover:animate-jelly"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} className="md:w-8 md:h-8" /> : <Menu size={24} className="md:w-8 md:h-8" />}
@@ -144,7 +142,7 @@ const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
                 className="flex items-center group"
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
-                <span className="text-3xl sm:text-4xl md:text-5xl font-black text-charcoal group-hover:text-maaviiOrange transition-colors uppercase tracking-tight group-hover:translate-x-4 duration-300">
+                <span className="text-3xl sm:text-4xl md:text-5xl font-black text-charcoal group-hover:text-maaviiOrange transition-colors uppercase tracking-tight group-hover:translate-x-4 duration-300 hover:animate-wiggle">
                   {link.name}
                 </span>
                 <span className="ml-4 w-0 h-1 md:h-2 bg-maaviiOrange group-hover:w-full transition-all duration-500 rounded-full"></span>

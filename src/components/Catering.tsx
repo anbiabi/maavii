@@ -31,10 +31,6 @@ const Catering: React.FC = () => {
             <h4 className="text-2xl font-black text-charcoal mb-4 uppercase">Book Catering</h4>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
-                <span className="text-2xl">📞</span>
-                <span className="text-xl font-black text-maaviiOrange">010-4409-2301</span>
-              </div>
-              <div className="flex items-center gap-4">
                 <span className="text-2xl">✉️</span>
                 <span className="text-lg text-charcoal">info@maaviiglobaleats.com</span>
               </div>
@@ -43,7 +39,7 @@ const Catering: React.FC = () => {
                 <div>
                   <a href="https://wa.me/821044092301" target="_blank" rel="noopener noreferrer" className="text-lg text-green-600 font-bold hover:underline">WhatsApp</a>
                   <span className="mx-2">|</span>
-                  <a href="https://pf.kakao.com/_xjXKxj" target="_blank" rel="noopener noreferrer" className="text-lg text-yellow-500 font-bold hover:underline">KakaoTalk</a>
+                  <a href="https://open.kakao.com/o/sfnml5di" target="_blank" rel="noopener noreferrer" className="text-lg text-yellow-500 font-bold hover:underline">KakaoTalk</a>
                 </div>
               </div>
             </div>

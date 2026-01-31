@@ -90,7 +90,7 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose }) => {
 
               {/* KakaoTalk Checkout */}
               <a
-                href="https://pf.kakao.com/_xjXKxj"
+                href="https://open.kakao.com/o/sfnml5di"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full bg-yellow-400 text-charcoal py-4 rounded-xl font-bold text-lg hover:bg-yellow-500 transition-colors shadow-lg flex items-center justify-center gap-2"

@@ -29,7 +29,7 @@ const About: React.FC = () => {
           </div>
 
           {/* Floating Stats or Badges - BOLDER */}
-          <div className="absolute -bottom-6 md:-bottom-10 -right-2 md:-right-10 vibrant-gradient p-6 md:p-10 rounded-2xl md:rounded-3xl shadow-[0_20px_40px_rgba(249,115,22,0.3)] md:shadow-[0_30px_60px_rgba(249,115,22,0.4)] border-4 md:border-6 border-white -rotate-6 group-hover:rotate-0 transition-all duration-500 z-20">
+          <div className="absolute -bottom-6 md:-bottom-10 -right-2 md:-right-10 vibrant-gradient p-6 md:p-10 rounded-2xl md:rounded-3xl shadow-[0_20px_40px_rgba(249,115,22,0.3)] md:shadow-[0_30px_60px_rgba(249,115,22,0.4)] border-4 md:border-6 border-white -rotate-6 group-hover:rotate-0 transition-all duration-500 z-20 hover:animate-wiggle">
             <div className="flex items-center gap-4 md:gap-6">
               <Heart className="text-white w-8 h-8 md:w-12 md:h-12 animate-pulse" />
               <div className="text-white">
@@ -41,21 +41,21 @@ const About: React.FC = () => {
         </div>
 
         <div className="space-y-10 md:space-y-12 order-1 lg:order-2">
-          <div className="inline-flex items-center gap-3 md:gap-4 px-6 py-2 md:px-8 md:py-3 bg-maaviiTeal text-charcoal rounded-2xl font-black text-xs md:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] shadow-xl border-b-4 border-black/20">
+          <div className="inline-flex items-center gap-3 md:gap-4 px-6 py-2 md:px-8 md:py-3 bg-maaviiTeal text-charcoal rounded-2xl font-black text-xs md:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] shadow-xl border-b-4 border-black/20 hover:animate-jelly transition-all">
             <Utensils size={18} className="animate-bounce" />
             Our Heritage
           </div>
 
           <h2 className="text-5xl md:text-8xl font-black text-charcoal leading-[1] tracking-tighter">
             {t('aboutTitle').split(' ').map((word, i) => (
-              <span key={i} className={word === "Maavii's" || word === 'Cuisine' ? 'text-maaviiOrange block text-stroke-vibrant transform -rotate-1' : 'inline-block mr-3 md:mr-4'}>
+              <span key={i} className={word === "Maavii's" || word === 'Cuisine' ? 'text-maaviiOrange block text-stroke-vibrant transform -rotate-1 hover:animate-wiggle cursor-default' : 'inline-block mr-3 md:mr-4 hover:scale-110 transition-transform cursor-default'}>
                 {word}
               </span>
             ))}
           </h2>
 
           <div className="space-y-8 md:space-y-10">
-            <p className="text-xl md:text-3xl text-charcoal/90 font-serif leading-relaxed italic border-l-[10px] md:border-l-[16px] border-maaviiYellow pl-6 md:pl-10 glass-vibrant p-7 md:p-10 rounded-2xl md:rounded-3xl shadow-xl">
+            <p className="text-xl md:text-3xl text-charcoal/90 font-serif leading-relaxed italic border-l-[10px] md:border-l-[16px] border-maaviiYellow pl-6 md:pl-10 glass-vibrant p-7 md:p-10 rounded-2xl md:rounded-3xl shadow-xl hover:animate-float transition-all">
               {t('aboutBody1')}
             </p>
             <p className="text-base md:text-xl text-charcoal/70 font-serif leading-relaxed px-2 md:px-4">
@@ -66,7 +66,7 @@ const About: React.FC = () => {
           <div className="pt-10 md:pt-12 border-t-8 border-double border-maaviiOrange/30">
             <div className="flex flex-col sm:flex-row gap-8 md:gap-10 items-center justify-center sm:justify-start">
               <div className="flex items-center gap-4 md:gap-5">
-                <div className="w-16 h-16 md:w-20 md:h-20 bg-charcoal rounded-2xl md:rounded-[2rem] flex items-center justify-center text-maaviiYellow shadow-2xl border-b-6 md:border-b-8 border-maaviiChocolate rotate-3 hover:rotate-0 transition-transform">
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-charcoal rounded-2xl md:rounded-[2rem] flex items-center justify-center text-maaviiYellow shadow-2xl border-b-6 md:border-b-8 border-maaviiChocolate rotate-3 hover:rotate-0 transition-transform hover:animate-jelly">
                   <Globe className="w-8 h-8 md:w-10 md:h-10 animate-spin-slow" />
                 </div>
                 <span className="font-black text-base md:text-lg uppercase tracking-widest text-charcoal/80 max-w-[150px]">{t('aboutBody3')}</span>

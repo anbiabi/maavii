@@ -6,6 +6,7 @@
 }
 
 @theme {
+  /* Original African Vibrant Colors */
   --color-maavii-gold: #EAB308;
   --color-maavii-teal: #06B6D4;
   --color-maavii-orange: #F97316;
@@ -17,13 +18,66 @@
   --color-cream: #FFFDF5;
   --color-deep-red: #B91C1C;
   --color-charcoal: #1A1A1A;
+  
+  /* Fun accent colors to mix in */
+  --color-fun-pink: #FF6B9D;
+  --color-fun-cyan: #06B6D4;
 
   --font-sans: var(--font-geologica);
   --font-serif: var(--font-lora);
 
+  /* Playful Animations */
   --animate-bounce-slow: bounce 3s infinite;
+  --animate-bounce-fast: bounce 1s infinite;
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   --animate-spin-slow: spin 8s linear infinite;
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-shake: shake 0.5s ease-in-out infinite;
+  --animate-jelly: jelly 0.5s ease-in-out infinite;
+  --animate-pop: pop 0.3s ease-out;
+  --animate-wave: wave 2s ease-in-out infinite;
+  --animate-blob: blob 8s ease-in-out infinite;
+}
+
+/* Playful Keyframe Animations */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@keyframes jelly {
+  0%, 100% { transform: scale(1, 1); }
+  25% { transform: scale(0.9, 1.1); }
+  50% { transform: scale(1.1, 0.9); }
+  75% { transform: scale(0.95, 1.05); }
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+@keyframes blob {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
 }
 
 body {
@@ -32,15 +86,11 @@ body {
   font-family: var(--font-serif);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
 }
 
+/* Original African Pattern Background */
 .african-pattern {
   background-color: #FACC15;
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23F97316' fill-opacity='0.25'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4v-4H4v4H0v2h4v4h2v-4h4v-2H6zm30 0v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -60,6 +110,7 @@ h6 {
   border-width: 10px;
 }
 
+/* Original Vibrant Gradient */
 .vibrant-gradient {
   background: linear-gradient(135deg, #F97316 0%, #E11D48 50%, #8B5CF6 100%);
   background-size: 200% 200%;
@@ -67,25 +118,19 @@ h6 {
 }
 
 @keyframes gradient-move {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
+/* Original Logo Circle Style */
 .logo-circle {
   background: radial-gradient(circle, #FACC15 0%, #F97316 70%, #451a03 100%);
   border: 4px double #FFFDF5;
   box-shadow: 0 0 30px rgba(249, 115, 22, 0.6);
 }
 
+/* Original Glass Effect */
 .glass-vibrant {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
@@ -93,6 +138,7 @@ h6 {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
+/* Original Text Stroke */
 .text-stroke-vibrant {
   -webkit-text-stroke: 1px #F97316;
   text-shadow: 2px 2px 0px #FACC15;
@@ -159,18 +205,40 @@ a[class*="p-4"][class*="rounded-"]::after {
 }
 
 @keyframes shiny-sweep {
-  0% {
-    left: -100%;
-    top: -100%;
-  }
+  0% { left: -100%; top: -100%; }
+  30% { left: 150%; top: 150%; }
+  100% { left: 150%; top: 150%; }
+}
 
-  30% {
-    left: 150%;
-    top: 150%;
-  }
+/* Fun Animations Added */
+.blob {
+  animation: blob 8s ease-in-out infinite;
+}
 
-  100% {
-    left: 150%;
-    top: 150%;
-  }
+.hover-wiggle:hover {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+.hover-float:hover {
+  animation: float 1s ease-in-out infinite;
+}
+
+.hover-jelly:hover {
+  animation: jelly 0.5s ease-in-out;
+}
+
+.hover-pop:hover {
+  animation: pop 0.3s ease-out;
+}
+
+/* Fun Gradient Text */
+.text-gradient-fun {
+  background: linear-gradient(135deg, 
+    #F97316 0%, 
+    #E11D48 50%, 
+    #8B5CF6 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

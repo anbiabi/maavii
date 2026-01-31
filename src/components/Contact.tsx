@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Phone, Instagram, MapPin, Send, Truck } from 'lucide-react';
+import { Instagram, MapPin, Send, Truck } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Contact: React.FC = () => {
@@ -32,27 +32,15 @@ const Contact: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-8 md:gap-10">
-            <a href="tel:01032142301" className="flex items-center gap-6 md:gap-8 group">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-[1.5rem] md:rounded-3xl bg-maaviiTeal flex items-center justify-center text-charcoal group-hover:scale-110 group-hover:bg-maaviiOrange transition-all shadow-2xl border-b-4 md:border-b-6 border-black/20">
-                <Phone className="w-8 h-8 md:w-10 md:h-10" />
-              </div>
-              <div>
-                <p className="text-[10px] md:text-sm font-black text-maaviiTeal uppercase tracking-[0.2em] md:tracking-[0.3em] mb-0.5 md:mb-1">{t('contactPhone')}</p>
-                <p className="text-xl md:text-3xl font-black group-hover:text-maaviiOrange transition-colors">010-3214-2301</p>
-              </div>
-            </a>
-
-            <a href="https://instagram.com/maaviifood" target="_blank" className="flex items-center gap-6 md:gap-8 group">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-[1.5rem] md:rounded-3xl bg-maaviiOrange flex items-center justify-center text-maaviiChocolate group-hover:scale-110 group-hover:bg-maaviiTeal transition-all shadow-2xl border-b-4 md:border-b-6 border-black/20">
-                <Instagram className="w-8 h-8 md:w-10 md:h-10" />
-              </div>
-              <div>
-                <p className="text-[10px] md:text-sm font-black text-maaviiOrange uppercase tracking-[0.2em] md:tracking-[0.3em] mb-0.5 md:mb-1">Instagram</p>
-                <p className="text-xl md:text-3xl font-black group-hover:text-maaviiTeal transition-colors">@maavii.fusion</p>
-              </div>
-            </a>
-          </div>
+          <a href="https://instagram.com/maaviifood" target="_blank" className="flex items-center gap-6 md:gap-8 group">
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-[1.5rem] md:rounded-3xl bg-maaviiOrange flex items-center justify-center text-maaviiChocolate group-hover:scale-110 group-hover:bg-maaviiTeal transition-all shadow-2xl border-b-4 md:border-b-6 border-black/20">
+              <Instagram className="w-8 h-8 md:w-10 md:h-10" />
+            </div>
+            <div>
+              <p className="text-[10px] md:text-sm font-black text-maaviiOrange uppercase tracking-[0.2em] md:tracking-[0.3em] mb-0.5 md:mb-1">Instagram</p>
+              <p className="text-xl md:text-3xl font-black group-hover:text-maaviiTeal transition-colors">@maavii.fusion</p>
+            </div>
+          </a>
 
           <div className="p-8 md:p-10 rounded-[2rem] md:rounded-[3rem] border-4 md:border-8 border-dashed border-maaviiYellow/40 bg-maaviiYellow/10 shadow-2xl">
             <div className="flex gap-4 md:gap-6">
@@ -110,7 +98,7 @@ const Contact: React.FC = () => {
                 </p>
               </div>
               <a
-                href="https://pf.kakao.com/_xjXKxj"
+                href="https://open.kakao.com/o/sfnml5di"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center py-4 md:py-6 bg-yellow-400 text-charcoal rounded-2xl font-black text-lg md:text-xl hover:bg-yellow-500 transition-all shadow-xl hover:scale-105"
