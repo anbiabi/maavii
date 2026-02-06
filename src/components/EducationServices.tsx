@@ -123,7 +123,7 @@ const EducationServices: React.FC = () => {
                 <div className="text-center mb-8">
                     <a
                         href="/education"
-                        className="inline-block px-8 py-4 bg-maaviiTeal text-cream rounded-xl font-black text-xl hover:bg-teal-700 transition-colors"
+                        className="inline-block px-8 py-4 bg-maaviiTeal text-cream rounded-xl font-black text-xl hover:bg-maaviiTeal/80 transition-colors"
                     >
                         Explore Full Education Programs
                     </a>
@@ -279,7 +279,7 @@ const EducationServices: React.FC = () => {
                                         <p className="text-charcoal/60 font-serif">{event.description}</p>
                                     </div>
                                     <div className="flex flex-col gap-3">
-                                        <button className="px-8 py-4 bg-maaviiTeal text-cream rounded-lg font-black hover:bg-teal-700 transition-colors whitespace-nowrap">
+                                        <button className="px-8 py-4 bg-maaviiTeal text-cream rounded-lg font-black hover:bg-maaviiTeal/80 transition-colors whitespace-nowrap">
                                             Register
                                         </button>
                                         <a href="/education" className="px-8 py-4 inline-block bg-cream border-2 border-charcoal text-charcoal rounded-lg font-bold hover:bg-charcoal/5 text-center">

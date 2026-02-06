@@ -136,7 +136,7 @@ const Activities: React.FC = () => {
                                     </div>
                                 </div>
                                 
-                                <button className="w-full px-6 py-3 bg-maaviiTeal text-cream rounded-xl font-black hover:bg-teal-700 transition-colors">
+                                <button className="w-full px-6 py-3 bg-maaviiTeal text-cream rounded-xl font-black hover:bg-maaviiTeal/80 transition-colors">
                                     {language === 'EN' ? 'Register Now' : '지금 등록하기'}
                                 </button>
                             </div>

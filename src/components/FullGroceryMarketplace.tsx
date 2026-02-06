@@ -457,7 +457,7 @@ const FullGroceryMarketplace: React.FC = () => {
                 <div className="text-center mb-8 px-4">
                     <a
                         href="/grocery"
-                        className="inline-block px-6 py-3 md:px-8 md:py-4 bg-maaviiTeal text-cream rounded-xl font-black text-lg md:text-xl hover:bg-teal-700 transition-colors shadow-lg"
+                        className="inline-block px-6 py-3 md:px-8 md:py-4 bg-maaviiTeal text-cream rounded-xl font-black text-lg md:text-xl hover:bg-maaviiTeal/80 transition-colors shadow-lg"
                     >
                         Explore Selection
                     </a>
@@ -569,7 +569,7 @@ const FullGroceryMarketplace: React.FC = () => {
                             <li>✓ Recipe cards included</li>
                             <li>✓ Free nationwide shipping</li>
                         </ul>
-                        <button className="w-full px-5 py-3 md:px-6 md:py-4 bg-maaviiTeal text-cream rounded-xl font-black text-sm md:text-base hover:bg-teal-700 transition-colors shadow-lg">
+                        <button className="w-full px-5 py-3 md:px-6 md:py-4 bg-maaviiTeal text-cream rounded-xl font-black text-sm md:text-base hover:bg-maaviiTeal/80 transition-colors shadow-lg">
                             Subscribe to Box
                         </button>
                     </div>

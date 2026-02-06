@@ -83,7 +83,7 @@ export default function Services() {
                   
                   <a 
                     href="#${service.anchor}"
-                    className="inline-block px-8 py-4 bg-maaviiTeal text-cream rounded-xl font-black hover:bg-teal-700 transition-colors"
+                    className="inline-block px-8 py-4 bg-maaviiTeal text-cream rounded-xl font-black hover:bg-maaviiTeal/80 transition-colors"
                   >
                     Learn More About {service.title.split(' ')[0]}
                   </a>
@@ -107,7 +107,7 @@ export default function Services() {
             </a>
             <a 
               href="mailto:info@maaviiglobaleats.com" 
-              className="px-8 py-4 bg-maaviiTeal text-cream rounded-xl font-black text-lg hover:bg-teal-700 transition-colors min-w-[200px]"
+              className="px-8 py-4 bg-maaviiTeal text-cream rounded-xl font-black text-lg hover:bg-maaviiTeal/80 transition-colors min-w-[200px]"
             >
               Email Inquiry
             </a>

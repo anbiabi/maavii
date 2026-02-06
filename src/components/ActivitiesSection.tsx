@@ -53,7 +53,7 @@ const ActivitiesSection: React.FC = () => {
                     </div>
                     <Link 
                         href="/activities" 
-                        className="px-8 py-4 bg-maaviiTeal text-cream rounded-xl font-black hover:bg-teal-700 transition-all flex items-center gap-2"
+                        className="px-8 py-4 bg-maaviiTeal text-cream rounded-xl font-black hover:bg-maaviiTeal/80 transition-all flex items-center gap-2"
                     >
                         <Calendar className="w-5 h-5" />
                         {language === 'EN' ? 'View All Activities' : '모든 활동 보기'}
