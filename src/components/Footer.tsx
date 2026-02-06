@@ -4,28 +4,33 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="py-16 border-t border-charcoal/5 bg-cream">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex items-center gap-4">
-            <div className="w-10 h-10 bg-deepRed flex items-center justify-center rounded-xl rotate-3 shadow-lg">
-              <span className="text-cream font-bold text-xl">M</span>
+    <footer className="py-16 md:py-24 bg-charcoal relative overflow-hidden text-cream border-t-[6px] md:border-t-[8px] border-maaviiOrange">
+      {/* Background patterns */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none african-pattern"></div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12">
+          <div className="flex items-center gap-4 md:gap-6">
+            <div className="w-12 h-12 md:w-16 md:h-16 bg-white flex items-center justify-center rounded-2xl rotate-3 shadow-2xl border-b-4 border-maaviiOrange">
+              <span className="text-maaviiOrange font-black text-2xl md:text-3xl italic">M</span>
             </div>
             <div>
-              <span className="font-black tracking-tighter text-charcoal text-xl block leading-none">MAAVII</span>
-              <span className="text-[10px] font-bold text-maaviiTeal uppercase tracking-[0.2em]">Global Eats</span>
+              <span className="font-black tracking-tighter text-white text-2xl md:text-3xl block leading-none italic uppercase">MAAVII<span className="text-maaviiOrange">S</span></span>
+              <span className="text-[10px] md:text-xs font-black text-maaviiTeal uppercase tracking-[0.3em] mt-1 block">Culinary Fusion</span>
             </div>
           </div>
 
-          <p className="text-charcoal/40 text-sm font-serif text-center md:text-left">
-            © {new Date().getFullYear()} MAAVII Cuisine. Crafted with passion & spice.<br />
-            Proudly serving premium African & Korean fusion.
+          <p className="text-cream/60 text-base md:text-lg font-serif text-center md:text-left leading-relaxed max-w-md italic">
+            © {new Date().getFullYear()} <span className="text-maaviiYellow font-black">MAAVII</span>. Crafted with passion, heritage & spice.
           </p>
 
-          <div className="flex items-center gap-8">
-            <div className="flex gap-6 text-sm font-bold text-charcoal/60">
-              <a href="#" className="hover:text-maaviiOrange transition-colors">Privacy</a>
-              <a href="#" className="hover:text-maaviiOrange transition-colors">Terms</a>
+          <div className="flex flex-col items-center md:items-end gap-3 md:gap-4">
+            <div className="flex gap-6 md:gap-10 text-[10px] md:text-sm font-black uppercase tracking-[0.3em]">
+              <a href="/privacy" className="text-maaviiYellow hover:text-maaviiOrange transition-all hover:scale-110">Privacy</a>
+              <a href="/terms" className="text-maaviiYellow hover:text-maaviiOrange transition-all hover:scale-110">Terms</a>
+            </div>
+            <div className="text-[9px] md:text-[10px] font-black text-maaviiTeal uppercase tracking-widest bg-white/5 px-4 py-1.5 rounded-full">
+              Made in Yangsan with Love
             </div>
           </div>
         </div>

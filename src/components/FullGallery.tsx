@@ -101,8 +101,8 @@ const FullGallery: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {allImages.map((src, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="group relative aspect-[4/5] rounded-[2rem] overflow-hidden border-4 border-charcoal/20 cursor-pointer"
               onClick={() => openLightbox(src)}
             >
@@ -126,20 +126,20 @@ const FullGallery: React.FC = () => {
 
       {/* Lightbox Modal */}
       {selectedImage && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
           onClick={closeLightbox}
         >
           <div className="relative max-w-6xl max-h-[90vh] w-auto">
-            <button 
-              className="absolute -top-16 right-0 text-white text-xl font-bold bg-charcoal px-4 py-2 rounded-lg"
+            <button
+              className="absolute -top-16 right-0 text-maaviiYellow text-xl font-bold bg-charcoal px-4 py-2 rounded-lg"
               onClick={closeLightbox}
             >
               Close ×
             </button>
-            <img 
-              src={selectedImage} 
-              alt="Enlarged view" 
+            <img
+              src={selectedImage}
+              alt="Enlarged view"
               className="max-w-full max-h-[80vh] object-contain"
             />
           </div>

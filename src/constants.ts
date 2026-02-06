@@ -11,7 +11,7 @@ export const TRANSLATIONS: TranslationStrings = {
   navContact: { EN: 'Contact', KR: '문의하기' },
   navGrocery: { EN: 'Grocery', KR: '식료품' },
   heroTagline: { EN: 'Handcrafted with Love • Fresh Daily', KR: '사랑으로 빚은 손맛 • 매일 만드는 신선함' },
-  heroTitle: { EN: 'African & Korean Fusion Culinary Journey', KR: '아프리카와 한국의 융합, 미식의 여정' },
+  heroTitle: { EN: 'African & Korean Fusion Journey', KR: '아프리카 & 한국 퓨전 미식의 여정' },
   viewMenu: { EN: 'View Menu', KR: '메뉴 보기' },
   addToCart: { EN: 'Add to Cart', KR: '장바구니 담기' },
   cartTitle: { EN: 'Your Cart', KR: '장바구니' },
@@ -35,8 +35,8 @@ export const TRANSLATIONS: TranslationStrings = {
   noResults: { EN: 'No dishes found matching your search.', KR: '검색 결과가 없습니다.' },
   aboutTitle: { EN: "About Maavii's Cuisine", KR: "Maavii's Cuisine 소개" },
   aboutBody1: {
-    EN: "Maavii's Cuisine is born from a passion for sharing the rich, vibrant flavors of Cameroon and the refined techniques of French cooking. Maavii pours her heart into every dish, from savory brochettes grilled over open flames to delicate French salads and hearty, home-style meals from our Cameroonian Corner.",
-    KR: "Maavii's Cuisine은 카메룬의 풍부하고 활기찬 맛과 프랑스 요리의 정교한 기술을 공유하고자 하는 열정에서 탄생했습니다. Maavii는 직화로 구운 짭짤한 꼬치 요리부터 섬세한 프랑스식 샐러드, 그리고 카메룬 코너의 든든한 가정식 요리에 이르기까지 모든 요리에 진심을 담습니다."
+    EN: "Maavii's Cuisine is born from a passion for sharing the rich, vibrant flavors of African heritage refined with modern techniques. Maavii pours her heart into every dish, from savory brochettes grilled over open flames to delicate salads and hearty, home-style meals.",
+    KR: "Maavii's Cuisine은 풍부하고 활기찬 맛과 정교한 요리 기술을 공유하고자 하는 열정에서 탄생했습니다. Maavii는 직화로 구운 짭짤한 꼬치 요리부터 섬세한 샐러드, 그리고 든든한 가정식 요리에 이르기까지 모든 요리에 진심을 담습니다."
   },
   aboutBody2: {
     EN: "We believe in food that brings people together. Whether it's a small lunch box, a large party, or a church gathering, we provide memorable culinary experiences. We are ready to discuss a custom menu that perfectly fits your event and venue.",
@@ -63,7 +63,7 @@ export const MENU_ITEMS: MenuItem[] = [
     id: '1',
     category: 'main',
     name: { EN: 'Grilled Chicken Wings', KR: '그릴드 치킨 윙' },
-    description: { EN: 'Marinated in spicy African Peri-Peri sauce with Korean aromatics.', KR: '매콤한 아프리카 페리페리 소스와 한국의 향신료로 마리네이드한 날개 요리.' },
+    description: { EN: 'Marinated in spicy Signature sauce with aromatic herbs.', KR: '매콤한 시그니처 소스와 향신료로 마리네이드한 날개 요리.' },
     price: 18000,
     image: '/images/food/02_roasted_chicken_pieces.jpg'
   },
@@ -79,7 +79,7 @@ export const MENU_ITEMS: MenuItem[] = [
     id: '3',
     category: 'main',
     name: { EN: 'Jollof Rice Special', KR: '졸로프 라이스 스페셜' },
-    description: { EN: 'West African classic smoky rice served with spicy kimchi slaw.', KR: '스파이시 김치 슬로우와 함께 제공되는 서아프리카 정통 스모키 라이스.' },
+    description: { EN: 'Signature classic smoky rice served with spicy kimchi slaw.', KR: '스파이시 김치 슬로우와 함께 제공되는 시그니처 정통 스모키 라이스.' },
     price: 15000,
     image: '/images/food/rice-sauce-meal.jpg'
   },
@@ -150,8 +150,8 @@ export const MENU_ITEMS: MenuItem[] = [
   {
     id: '12',
     category: 'main',
-    name: { EN: 'African Salad Bowl', KR: '아프리카 샐러드 보울' },
-    description: { EN: 'Traditional African salad with authentic spices and dressing.', KR: '정통 향신료와 드레싱을 곁들인 전통 아프리카 샐러드.' },
+    name: { EN: 'Signature Salad Bowl', KR: '시그니처 샐러드 보울' },
+    description: { EN: 'Traditional salad with authentic spices and dressing.', KR: '정통 향신료와 드레싱을 곁들인 전통 샐러드.' },
     price: 13000,
     image: '/images/food/salade.jpg'
   },
@@ -191,7 +191,7 @@ export const MENU_ITEMS: MenuItem[] = [
     id: '18',
     category: 'special',
     name: { EN: 'Celebration Table', KR: '축하 테이블' },
-    description: { EN: 'Elegant party spread with diverse African specialties.', KR: '다양한 아프리카 특선 요리가 있는 우아한 파티 스프레드.' },
+    description: { EN: 'Elegant party spread with diverse gourmet specialties.', KR: '다양한 미식 특선 요리가 있는 우아한 파티 스프레드.' },
     price: 85000,
     image: '/images/food/Party_table.jpg'
   },
@@ -199,7 +199,7 @@ export const MENU_ITEMS: MenuItem[] = [
     id: '19',
     category: 'special',
     name: { EN: 'Ndole Fish Feast', KR: '은돌레 생선 정식' },
-    description: { EN: 'Traditional Cameroonian ndole with fresh fish and sides.', KR: '신선한 생선과 반찬이 있는 전통 카메룬 은돌레.' },
+    description: { EN: 'Traditional ndole with fresh fish and sides.', KR: '신선한 생선과 반찬이 있는 전통 은돌레.' },
     price: 32000,
     image: '/images/food/ndole-fish-meal.jpg'
   },
