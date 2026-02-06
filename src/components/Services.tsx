@@ -10,7 +10,7 @@ export default function Services() {
       title: 'Catering & Events',
       icon: Utensils,
       description: 'Full-service catering for weddings, corporate events, and private parties.',
-      image: '/images/event.jpg', // Image of a catering event
+      image: '/images/afrovil/servicecatering.jpg', // Image of a catering event
       details: 'We provide authentic African-Korean fusion catering for embassies, festivals, corporate events, and private parties across Busan and Yangsan. Our experienced team handles everything from setup to service, ensuring your event is memorable.',
       anchor: 'catering'
     },
@@ -81,9 +81,12 @@ export default function Services() {
                     {service.details}
                   </p>
                   
-                  <button className="px-8 py-4 bg-maaviiTeal text-cream rounded-xl font-black hover:bg-teal-700 transition-colors">
+                  <a 
+                    href="#${service.anchor}"
+                    className="inline-block px-8 py-4 bg-maaviiTeal text-cream rounded-xl font-black hover:bg-teal-700 transition-colors"
+                  >
                     Learn More About {service.title.split(' ')[0]}
-                  </button>
+                  </a>
                 </div>
               </div>
             );

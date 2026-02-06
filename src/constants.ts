@@ -6,6 +6,7 @@ export const TRANSLATIONS: TranslationStrings = {
   navServices: { EN: 'Services', KR: '서비스' },
   navMenu: { EN: 'Menu', KR: '메뉴' },
   navGallery: { EN: 'Gallery', KR: '갤러리' },
+  navActivities: { EN: 'Activities', KR: '활동' },
   navComingSoon: { EN: 'Coming Soon', KR: '준비 중' },
   navContact: { EN: 'Contact', KR: '문의하기' },
   navGrocery: { EN: 'Grocery', KR: '식료품' },

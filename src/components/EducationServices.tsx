@@ -223,9 +223,9 @@ const EducationServices: React.FC = () => {
                                         <button className="w-full px-6 py-4 bg-charcoal text-cream rounded-xl font-black hover:bg-maaviiOrange transition-colors mb-3">
                                             Apply Now
                                         </button>
-                                        <button className="w-full px-6 py-2 bg-cream border-2 border-charcoal text-charcoal rounded-xl font-bold hover:bg-charcoal/5">
+                                        <a href="/education" className="w-full px-6 py-2 inline-block bg-cream border-2 border-charcoal text-charcoal rounded-xl font-bold hover:bg-charcoal/5 text-center">
                                             Learn More
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -282,9 +282,9 @@ const EducationServices: React.FC = () => {
                                         <button className="px-8 py-4 bg-maaviiTeal text-cream rounded-lg font-black hover:bg-teal-700 transition-colors whitespace-nowrap">
                                             Register
                                         </button>
-                                        <button className="px-8 py-4 bg-cream border-2 border-charcoal text-charcoal rounded-lg font-bold hover:bg-charcoal/5">
+                                        <a href="/education" className="px-8 py-4 inline-block bg-cream border-2 border-charcoal text-charcoal rounded-lg font-bold hover:bg-charcoal/5 text-center">
                                             Learn More
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

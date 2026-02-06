@@ -8,6 +8,7 @@ import MenuPreview from "@/components/MenuPreview";
 import GroceryMarketplace from "@/components/GroceryMarketplace";
 import EducationServices from "@/components/EducationServices";
 import ComingSoonPreview from "@/components/ComingSoonPreview";
+import ActivitiesSection from "@/components/ActivitiesSection";
 
 export default function Home() {
     return (
@@ -17,6 +18,7 @@ export default function Home() {
             <ServicesIntro />
             <MenuPreview />
             <CulinaryGallery />
+            <ActivitiesSection />
             <section id="education">
                 <EducationServices />
             </section>

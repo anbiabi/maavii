@@ -28,6 +28,7 @@ const Header: React.FC<HeaderProps> = ({ onCartToggle }) => {
     { name: t('navAbout'), href: '/#about', isHash: true },
     { name: t('navServices'), href: '/#services', isHash: true },
     { name: t('navMenu'), href: '/#menu', isHash: true },
+    { name: t('navActivities'), href: '/#activities', isHash: true },
     { name: t('navGrocery'), href: '/#grocery', isHash: true },
     { name: t('navComingSoon'), href: '/coming-soon', isHash: false },
     { name: t('navContact'), href: '/#contact', isHash: true },
