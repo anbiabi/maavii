@@ -1,0 +1,3 @@
+# ads.txt
+
+# This file is used for declaring authorized digital sellers according to IAB guidelines.
